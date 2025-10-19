@@ -1,0 +1,13 @@
+.text-center.beer-slider-wrapper.h-100.d-flex.align-items-center.justify-content-center
+	#salon-slider.beer-slider(data-beer-label="")
+		picture
+			source(type="image/webp" srcset="img/salon-before-mob.webp" media="(max-width: 430px)")
+			source(srcset="img/salon-before-mob.png" media="(max-width: 430px)")
+			source(type="image/webp" srcset="img/salon-before.webp")
+			img(src="img/salon-before.png" alt="")
+		.beer-reveal(data-beer-label="")
+			picture
+				source(type="image/webp" srcset="img/salon-after-mob.webp" media="(max-width: 430px)")
+				source(srcset="img/salon-after-mob.png" media="(max-width: 430px)")
+				source(type="image/webp" srcset="img/salon-after.webp")
+				img(src="img/salon-after.png" alt="")

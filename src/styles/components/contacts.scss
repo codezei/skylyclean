@@ -1,0 +1,33 @@
+.contacts {
+    // &__map {
+    //     text-align: center;
+    //     display: block;
+    //     width: 100%;
+    //     margin-bottom: var(--h2);
+    // }
+    &__iframe {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+// .map {
+//     display: inline-block;
+//     position: relative;
+//     &__location {
+//         background: #191919;
+//         box-shadow: inset 0 0 5px rgba($color: #ffffff, $alpha: 0.5);
+//         text-align: center;
+//         position: absolute;
+//         padding: 1rem;
+//         right: 45%;
+//         bottom: 75%;
+//     }
+
+//     @media screen and (max-width: 575px) {
+//         &__location {
+//             display: none;
+//         }
+//     }
+// }

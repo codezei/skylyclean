@@ -1,0 +1,14 @@
+.timer {
+    &__title {
+        margin-bottom: 0.5rem;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-family: monospace;
+    }
+    &__btn {
+        margin-top: 0.5rem;
+    }
+}

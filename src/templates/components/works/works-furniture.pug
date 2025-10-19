@@ -1,0 +1,101 @@
+section.works.block#works
+	.container
+		.row.g-4 
+			.col-12
+				.row.align-items-center.justify-content-between.g-2
+					.col-auto(data-aos="fade-right")
+						h2.works__title.text-uppercase.mb-0 Nasze realizacje
+					.col-auto(data-aos="fade-left")
+						include ../cta-button
+					.col-12(data-aos="fade-in")
+						h3.works__subtitle.h6.text-light.mb-0 Zobacz efekty naszej pracy
+			.col-12(data-aos="fade-in" data-aos-delay="100")
+				.categories-navigation
+					.categories-navigation-swiper 
+						.swiper-button-next.categories-button-arrow
+						.swiper-button-prev.categories-button-arrow
+						.swiper-wrapper 
+							.swiper-slide
+								button.btn.btn-primary.btn-small.category-btn(type="button") 
+									span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+									span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+									span.category-btn__text Tapicerka meblowa
+							.swiper-slide
+								button.btn.btn-primary.btn-small.category-btn(type="button") 
+									span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+									span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+									span.category-btn__text Materace
+							.swiper-slide
+								button.btn.btn-primary.btn-small.category-btn(type="button") 
+									span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+									span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+									span.category-btn__text Dywany
+							.swiper-slide
+								button.btn.btn-primary.btn-small.category-btn(type="button") 
+									span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+									span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+									span.category-btn__text Tapicerka samochodowa
+							.swiper-slide
+								button.btn.btn-primary.btn-small.category-btn(type="button") 
+									span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+									span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+									span.category-btn__text Okna
+				.categories-content
+					.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+					.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+					.swiper.categories-content-swiper 
+						.swiper-wrapper 
+							.swiper-slide
+								h4.h5.text-center.mb-0 Pranie tapicerki meblowej – zdjęcia realizacji sof, foteli i kanap | 
+									include ../cities
+								hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [5,6,7,8]
+										a.col(href=`img/furniture/furniture-img-${num}.webp`) 
+											span.sr-only Tapicerka meblowa
+											picture.work
+												source(srcset=`img/furniture/furniture-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/furniture/furniture-img-${num}.jpg`, alt="")
+							.swiper-slide
+								h4.h5.text-center.mb-0 Pranie materacy – zdjęcia efektów czyszczenia materacy | 
+									include ../cities
+								hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [1,2,3,4]
+										a.col(href=`img/mattress/mattress-img-${num}.webp`) 
+											span.sr-only Materace
+											picture.work
+												source(srcset=`img/mattress/mattress-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/mattress/mattress-img-${num}.jpg`, alt="")
+							.swiper-slide
+								h4.h5.text-center.mb-0 Pranie dywanów i wykładzin – zdjęcia po chemicznym czyszczeniu dywanów i wykładzin | 
+									include ../cities
+								hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [1,2,3,4]
+										a.col(href=`img/carpet/carpet-img-${num}.webp`) 
+											span.sr-only Dywany i wykładziny
+											picture.work
+												source(srcset=`img/carpet/carpet-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/carpet/carpet-img-${num}.jpg`, alt="")
+							.swiper-slide
+								h4.h5.text-center.mb-0 Pranie tapicerki samochodowej – zdjęcia czyszczenia foteli, kanapy i podsufitki | 
+									include ../cities
+								hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [1,2,3,4]
+										a.col(href=`img/salon/salon-img-${num}.webp`) 
+											span.sr-only Tapicerka samochodowa
+											picture.work
+												source(srcset=`img/salon/salon-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/salon/salon-img-${num}.jpg`, alt="")
+							.swiper-slide
+								h4.h5.text-center.mb-0 Mycie okien z kurzu, smug, zacieków i osadów po deszczu.
+								hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [1,2,3,4]
+										a.col(href=`img/window/window-img-${num}.webp`) 
+											span.sr-only Mycie okien
+											picture.work
+												source(srcset=`img/window/window-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/window/window-img-${num}.jpg`, alt="")

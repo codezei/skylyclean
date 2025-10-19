@@ -1,0 +1,64 @@
+header.header 
+	.container 
+		.header__inner
+			.header__logo 
+				a(href="/")
+					span.sr-only Logo
+					include ../logo
+			.header__menu#main-menu 
+				nav.menu 
+					.menu__item
+						a.menu__link(href="#about") O nas
+					.menu__item
+						a.menu__link(href="#services") Usługi
+						nav.menu 
+							.menu__item
+								a.menu__link(href="./pranie-tapicerki-meblowej.html") Pranie tapicerki meblowej
+							.menu__item
+								a.menu__link(href="./pranie-materacy.html") Pranie materacy
+							.menu__item
+								a.menu__link(href="./pranie-dywanow.html") Pranie dywanow
+							.menu__item
+								a.menu__link(href="./pranie-tapicerki-samochodowej.html") Pranie tapicerki samochodowej
+							.menu__item
+								a.menu__link(href="./mycie-okien.html") Mycie okien
+					.menu__item
+						a.menu__link(href="#price") Cennik
+					.menu__item
+						a.menu__link(href="#reviews") Opinie
+					.menu__item
+						a.menu__link(href="#works") Prace
+					.menu__item
+						a.menu__link(href="#contacts") Kontakt
+				.header__menu-socials.text-center
+					//- .card.card-glass-outline.card-small
+					//- 	span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+					//- 	span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+					//- 	span.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+					//- 	span.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+						include ../socials/socials
+				.header__menu-btn.text-center
+					a.btn.btn-primary-outline.btn-small.btn-rhombus.w-100(href="tel:+99999999999")
+						//- span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+						//- span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+						//- span.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+						//- span.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+						svg.icon.icon-right.shake(width="16" height="16")
+							use(href="#tel")
+						| Zadzwoń
+			.header__button
+				a.btn.btn-small.btn-rounded.btn-primary-outline.btn-bordered(href="tel:+99999999999")
+					//- span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+					//- span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+					//- span.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+					//- span.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+					svg.icon.icon-right.shake(width="16" height="16")
+						use(href="#tel")
+					| Zadzwoń
+			.header__burger
+				button.js-burger.btn.btn-transparent(type="button" aria-expanded="false" aria-controls="main-menu")
+					span.sr-only Otwórz menu mobilne
+					span.cross 
+						span 
+						span
+						span

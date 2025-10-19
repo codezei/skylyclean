@@ -1,0 +1,32 @@
+section.promo#promo.bg.bg-dark.bordered
+	.container
+		.row.flex-column-reverse.flex-lg-row.gx-5.gy-0
+			.col-12.col-lg-7.col-xl-8.align-self-center
+				.block 
+					.row.g-4.g-xl-5 
+						.col-12
+							h1.h2.promo__title.mb-0 Usługi sprzątające mieszkań i domów, pranie tapicerki meblowej, pranie&nbsp;materacy 
+								include ../cities
+						.col-12
+							.promo__subtitle.extractor 
+								.extractor__cleaner(data-aos="fade-left" data-aos-delay="100") 
+								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Profesjonalne sprzątanie mieszkań i domów po remoncie, usuwanie kurzu, tłuszczu i plam. Czyścimy tapicerkę meblową, materace, okna, okapy i kuchenki.
+						.col-12
+							.row.g-2.justify-content-center.justify-content-lg-start 
+								.col-auto.flex-grow-1.flex-lg-grow-0
+									include ../cta-button
+			.col-12.col-lg-5.col-xl-4
+				.mask
+					.semicircles.semicircles-top.semicircles-left
+					.semicircles.semicircles-top.semicircles-right
+					.semicircles.semicircles-bottom.semicircles-left
+					.semicircles.semicircles-bottom.semicircles-right
+					.mask__inner
+						h3.h6.mask__subtitle 
+							b.text-bold Usługi sprzątające mieszkań i domów:
+							br
+							include ../cities
+							br
+							include ../schedule
+						.mask__timer
+							include ../timer

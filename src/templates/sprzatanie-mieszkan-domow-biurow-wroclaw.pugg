@@ -1,0 +1,134 @@
+extends settings/layout
+
+prepend html
+	- const lang = "pl";
+
+prepend head
+	- const pageTitle = "Sprzątanie mieszkań, domów i biur | Profesjonalny serwis sprzątający — Wrocław i okolice | Cleantapi"
+	- const pageDescription = "Oferujemy kompleksowe sprzątanie mieszkań, domów i biur we Wrocławiu, Jelcz‑Laskowicach, Oleśnicy, Brzegu i Oławie. Sprzątanie cykliczne lub jednorazowe, ekologiczne środki, szybka realizacja. Zadzwoń: +48 575 256 496."
+	- const pageKeywords = "sprzątanie mieszkań Wrocław, sprzątanie domów Wrocław, sprzątanie biur Wrocław, firma sprzątająca Wrocław, sprzątanie regularne Wrocław, generalne porządki Wrocław, sprzątanie pomieszczeń Wrocław"
+	- const pageUrl = "sprzatanie-mieszkan-domow-biurow-wroclaw.html"
+	- const pageImage = "img/service-cleaning.webp"
+	- const twitterImage = "img/service-cleaning.webp"
+	- const themeColor = "#ffffff"
+
+append head
+	script(type="application/ld+json").
+		{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Strona główna",
+				"item": "https://cleantapi.pl/"
+				},
+				{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Sprzątanie mieszkań, domów i biur",
+				"item": "https://cleantapi.pl/sprzatanie-mieszkan-domow-biurow-wroclaw/"
+				}
+			]
+			},
+			{
+			"@type": "Service",
+			"name": "Sprzątanie mieszkań, domów i biur",
+			"serviceType": "Usługi sprzątania pomieszczeń mieszkalnych i komercyjnych",
+			"description": "Profesjonalne sprzątanie mieszkań, domów i biur we Wrocławiu i okolicach. Sprzątanie cykliczne, generalne lub po remoncie. Ekologiczne środki i nowoczesny sprzęt.",
+			"areaServed": [
+				{ "@type": "City", "name": "Wrocław" },
+				{ "@type": "City", "name": "Jelcz-Laskowice" },
+				{ "@type": "City", "name": "Oleśnica" },
+				{ "@type": "City", "name": "Brzeg" },
+				{ "@type": "City", "name": "Oława" }
+			],
+			"provider": {
+				"@type": ["LocalBusiness", "CleaningService"],
+				"name": "Cleantapi",
+				"url": "https://cleantapi.pl",
+				"telephone": "+48 575 256 496",
+				"email": "norovvitalikjaegarn@gmail.com",
+				"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Wrocław",
+				"addressCountry": "PL"
+				}
+			},
+			"termsOfService": "https://cleantapi.pl/",
+			"availableChannel": {
+				"@type": "ServiceChannel",
+				"servicePhone": {
+				"@type": "ContactPoint",
+				"telephone": "+48 575 256 496",
+				"contactType": "customer service",
+				"areaServed": "PL"
+				}
+			}
+			},
+			{
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+				"@type": "Question",
+				"name": "Jakie rodzaje sprzątania oferujecie?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Oferujemy sprzątanie mieszkań, domów i biur — zarówno regularne, jak i jednorazowe, np. po remoncie czy przeprowadzce."
+				}
+				},
+				{
+				"@type": "Question",
+				"name": "Czy używane środki są bezpieczne?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Tak. Używamy ekologicznych i bezpiecznych dla zdrowia środków czyszczących."
+				}
+				},
+				{
+				"@type": "Question",
+				"name": "Czy można zamówić usługę w weekend?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Tak, działamy od poniedziałku do soboty w godzinach 7:00 – 22:00. Sprzątanie w niedzielę — po wcześniejszym ustaleniu."
+				}
+				},
+				{
+				"@type": "Question",
+				"name": "Czy trzeba być obecnym podczas sprzątania?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Nie ma takiej konieczności, ale zawsze ustalamy indywidualnie preferencje klienta."
+				}
+				}
+			]
+			}
+		],
+		"sameAs": [
+			"https://www.facebook.com/Cleantapi/",
+			"https://vm.tiktok.com/ZMNuDPJg2/",
+			"https://g.co/kgs/vs8CZY"
+		]
+		}
+
+append content
+	script. 
+		const initialCategory = 4;
+	include components/header-2
+	main
+		include components/promo/promo-cleaning
+		include components/price
+		include components/how
+		include components/reviews
+		include components/cta
+		include components/works
+		include components/faq
+		include components/contacts
+		include components/popup
+		include components/icons
+	include components/footer
+
+append scripts

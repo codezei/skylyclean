@@ -1,0 +1,38 @@
+.faq {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+}
+
+
+
+.question {
+      cursor: pointer;
+      position: relative;
+      &__header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &.active &__btn {
+        transform: rotate(180deg);
+      }
+      &__title {
+        font-weight: 700;
+        margin: 0;
+      }
+      &__answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 400ms;
+        will-change: max-height;
+      }
+      &.active &__answer {
+        max-height: 500px;
+        margin-top: 1rem;
+      }
+}

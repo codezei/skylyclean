@@ -1,0 +1,69 @@
+.promo {
+    &__title {
+        text-align: center;
+    }
+    // background-color: #000;
+    // background-image:  url(../img/promo-bg-mob.webp);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // overflow: hidden;
+    // &__title {
+    //     text-transform: uppercase;
+    // }
+    // &__subtitle {
+    //     margin-bottom: var(--h2);
+    // }
+
+    // &__info {
+    //     position: relative;
+    //     text-align: center;
+    //     z-index: 1;
+    //     color: #fff;
+    //     &:before {
+    //         content: "";
+    //         display: block;
+    //         width: 200%;
+    //         padding-bottom: 100%;
+    //         background: #191919;
+    //         filter: blur(200px);
+    //         position: absolute;
+    //         left: 50%;
+    //         top: 50%;
+    //         transform: translate(-50%, -50%);
+    //         z-index: -1;
+    //     }
+    // }
+
+    @media screen and (min-width: 576px) {
+        // background-image:  url(../img/promo-bg-tablet.webp);
+        // &__info {
+        //     text-align: left;
+        // }
+        // &__btn {
+        //     justify-content: flex-start;
+
+        // }
+    }
+
+    @media screen and (min-width: 992px) {
+        &__title {
+            text-align: left;
+        }
+        // &__subtitle {
+        //     margin-bottom: 3rem;
+        // }
+        // &__bg {
+        //     width: 50%;
+        //     height: 100%;
+        // }
+        // &__btn {
+        //     margin-bottom: 0;
+        // }
+    }
+    @media screen and (min-width: 1400px) {
+        // background-image:  url(../img/promo-bg.webp);
+    }
+
+    
+}

@@ -1,0 +1,50 @@
+.house {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    &-header {
+        // height: 100px;
+        // overflow: hidden;
+        position: relative;
+        // z-index: -1;
+        padding-bottom: 33%;
+    }
+    &-body {
+        // padding-top: 20%;
+    }
+    // &-inner {
+    //     border-left: 4px solid var(--first-color-125);
+    //     border-right: 4px solid var(--first-color-125);
+    //     border-bottom: 4px solid var(--first-color-125);
+    //     padding: 0.5rem;
+    // }
+    .roof {
+        width: 45%;
+        border-left: 4px solid gray;
+        border-top: 4px solid gray;
+        transform-origin: left top;
+        transform: rotate(45deg);
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        background: var(--neutral-color);
+        &:before {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23005fff' class='bi bi-grid-fill' viewBox='0 0 16 16'%3E%3Cpath d='M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z'/%3E%3C/svg%3E");
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            // transform: translate(-50%, -50%);
+        }
+        &-left {
+            left: 25%;
+            border-radius: 0 0 0 15px;
+        }
+        &-right {
+            left: 75%;
+            border-radius: 0 15px 0 0;
+        }
+    }
+    &-inner {
+
+    }
+
+}

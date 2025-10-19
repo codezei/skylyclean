@@ -1,0 +1,39 @@
+section.cta#cta.bg.bg-dark
+	.container 
+		.row.flex-column-reverse.flex-lg-row.justify-content-center.gx-5.gy-0
+			.col-12.col-lg-7.col-xl-8.align-self-center(data-aos="fade-right")
+				.block
+					form.cta__form#cta-form(method="POST")
+						.row.g-2 
+							.col-6 
+								.card.card-primary-outline.card-rounded.input-wrap
+									input.input.cta__input(type="text" placeholder="Imię" name="name", required)
+							.col-6 
+								.card.card-primary-outline.card-rounded.input-wrap
+									input.input.cta__input(type="tel" placeholder="Telefon" name="phone", required)
+							.col-12
+								.card.card-primary-outline.card-rounded.input-wrap
+									.select-wrap
+										label(for="service") Wybierz jedną lub kilka usług (przytrzymaj Ctrl/⌘, aby zaznaczyć kilka)
+										select#service(name="service" required multiple).cta__input.input
+											option(value="Pranie tapicerki meblowej") Pranie tapicerki meblowej
+											option(value="Pranie materacy") Pranie materacy
+											option(value="Pranie dywanów") Pranie dywanów
+											option(value="Mycie okien") Mycie okien
+											option(value="Pranie tapicerki samochodowej") Pranie tapicerki samochodowej
+											option(value="Inne") Inne
+							.col-12 
+								.card.card-primary-outline.card-rounded.input-wrap
+									textarea.input.cta__input(placeholder="Wiadomość", name="message", rows="4")
+							.col-12 
+								button.btn.btn-contrast.btn-normal.btn-rounded.cta__btn(type="submit") 
+									| Wyślij zgłoszenie
+			.col-12.col-lg-5.col-xl-4
+				.mask
+					.semicircles.semicircles-top.semicircles-left
+					.semicircles.semicircles-top.semicircles-right
+					.semicircles.semicircles-bottom.semicircles-left
+					.semicircles.semicircles-bottom.semicircles-right
+					.mask__inner(data-aos="fade-down" data-aos-delay="100")
+						h2.mask__title Skontaktuj się z nami
+						h3.h6.mask__subtitle.mb-0 Wypełnij formularz, a my skontaktujemy się z Tobą najszybciej jak to możliwe

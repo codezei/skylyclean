@@ -1,0 +1,13 @@
+.text-center.beer-slider-wrapper.h-100.d-flex.align-items-center.justify-content-center
+	#mattress-slider.beer-slider(data-beer-label="")
+		picture
+			source(type="image/webp" srcset="img/mattress-before-mob.webp" media="(max-width: 430px)")
+			source(srcset="img/mattress-before-mob.png" media="(max-width: 430px)")
+			source(type="image/webp" srcset="img/mattress-before.webp")
+			img(src="img/mattress-before.png" alt="")
+		.beer-reveal(data-beer-label="")
+			picture
+				source(type="image/webp" srcset="img/mattress-after-mob.webp" media="(max-width: 430px)")
+				source(srcset="img/mattress-after-mob.png" media="(max-width: 430px)")
+				source(type="image/webp" srcset="img/mattress-after.webp")
+				img(src="img/mattress-after.png" alt="")

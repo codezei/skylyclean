@@ -1,0 +1,192 @@
+section.reviews.block#reviews
+	.container
+		.row.g-4 
+			.col-12
+				.row.align-items-center.justify-content-between.g-2
+					.col-auto(data-aos="fade-right")
+						h2.reviews__title.text-uppercase.mb-0 Opinie
+					.col-auto(data-aos="fade-left") 
+						.swiper-navigation
+							.reviews-button-prev.btn.btn-third.btn-small
+								.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+								svg.bi.bi-chevron-left(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16")
+									path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0")
+							.reviews-button-next.btn.btn-third.btn-small
+								.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+								svg.bi.bi-chevron-right(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16")
+									path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708")
+					.col-12(data-aos="fade-in") 
+						h3.reviews__subtitle.h4.h6.text-light.mb-0 Opinie klientów, którzy skorzystali z naszych usług 
+							span we 
+							include ../cities
+			.col-12(data-aos="fade-in" data-aos-delay="100") 
+				.swiper.reviews-swiper 
+					.swiper-wrapper
+						.swiper-slide
+							.review.card.card-primary-outline 
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name Natalia Bakreva
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Jestem bardzo zadowolona z usługi czyszczenia tapicerki! Sofa wygląda jak nowa – wszystkie plamy i zabrudzenia zniknęły, a materiał odzyskał świeżość i kolor. Ekipa działała szybko, profesjonalnie i zostawiła po sobie idealny porządek. Na pewno skorzystam ponownie i polecam każdemu, kto chce odświeżyć meble w swoim domu. 🌟…
+									picture 
+										source(srcset="img/review-img-1.webp" type="image/webp")
+										img.review__img(src="img/review-img-1.jpg", alt="", loading="lazy")
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+						.swiper-slide
+							.review.card.card-primary-outline 
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name Ola K
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Polecam firmę Top Tap Clean. Wszystkie plamy z mojej kanapy oraz poduszek zniknęły. Bardzo szybki termin realizacji, miła obsługa i dobra cena.
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+						.swiper-slide
+							.review.card.card-primary-outline 
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name EFEKT NR GRANIT
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Miałem ogromny problem z zapachem moczu kota na sofie. Żadne domowe sposoby nie pomagały, a nieprzyjemny zapach utrzymywał się tygodniami. Ekipa poradziła sobie perfekcyjnie – kanapa jest czysta, świeża i pachnie jak nowa. Jestem zachwycona efektem i polecam każdemu właścicielowi zwierząt! 🐾✨…
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+						.swiper-slide
+							.review.card.card-primary-outline 
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name Alicja GALIŃSKA
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Jestem akurat po praniu narożnika,usługa wykonana profesjonalnie i szybko aż się zdziwiłam...ale narożnik odświeżonym,czysty i pachnący.Dzięki za profesjonalizm..będę polecać dalej , na pewno jeszcze skorzystam .Pozdrawiam
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+						.swiper-slide
+							.review.card.card-primary-outline 
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name Elżbieta Lempart
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Serdecznie polecam usługi firmy Top Tap Clean. Pan szybko i profesjonalnie podjął się umycia dużych okien w całym domu. Okna są czyste, że aż lśnią. Solidna firma i atrakcyjne ceny 😊…
+									picture 
+										source(srcset="img/review-img-3.webp" type="image/webp")
+										img.review__img(src="img/review-img-3.jpg", alt="", loading="lazy")
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+						.swiper-slide
+							.review.card.card-primary-outline 
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name Janusz Antczak
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Jestem bardzo zadowolony z prania tapicerki i podsufitki samochodowej wykonanej przez firmę Top Tap Clean wykonanie profesjonalne i na wysokim poziomie jest to firma godna polecenia.
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+						.swiper-slide
+							.review.card.card-primary-outline  
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name Agnieszka Agnieszka
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Pan wyprał dwie wersalki bardzo szybko i dokładnie. Meble są jak nowe – czyste i pachnące. Sprawdził pH chemii, co było dla mnie ważne, bo mam małe dziecko. Wszystko odbyło się bezpiecznie, sprawnie i w miłej atmosferze. Pełen profesjonalizm i porządek po zakończeniu pracy. Polecam z czystym sumieniem! :)
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+						.swiper-slide
+							.review.card.card-primary-outline  
+								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+								.review__header
+									h4.h6.review__name Mirosław Sawicki
+									.rating.review__rating(style="--star-rating: 5;")
+								p.review__text Polecam Pana Dmitro - to fachowiec, który zna swoją sprawę.  Tapicerka wersalki po praniu jest jak nowa. Co więcej, kontrola pH po praniu i materiały najwyższej jakości. Latwy kontakt,  szybka realizacja i świetny wynik. Gorąco polecam.
+								.review__toggle
+									span.in-active-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye")
+										| Pokaż więcej
+									span.in-inactive-none 
+										svg.icon.icon-right(width="16" height="16")
+											use(href="#eye-close")
+										| Pokaż mniej
+			.col-12 
+				.text-center
+					a(href="https://goo.gl/maps/A5t7SypU83NrAAxQA" target="_blank") Tutaj
+					| &nbsp;możesz przeczytać wszystkie recenzje i zostawić własne.

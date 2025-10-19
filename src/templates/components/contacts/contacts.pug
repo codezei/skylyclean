@@ -1,0 +1,27 @@
+section#contacts.contacts.block
+	.container
+		.row.g-4 
+			.col-12(data-aos="fade-down")
+				h2.contacts__title.text-center.text-uppercase.mb-0 Kontakt
+			.col-12(data-aos="fade-in" data-aos-delay="100") 
+				.contacts__iframe(data-src="https://www.google.com/maps/d/embed?mid=1b4sVqyvE-jrbY4bAmbAEijMIkC43Y60&ehbc=2E312F&noprof=1")
+			.col-12(data-aos="fade-in" data-aos-delay="200") 
+				.row.g-2
+					.col-12.col-md-6.col-lg-3.text-center
+						.card.card-primary-outline.card-rounded.card-bordered
+							h3.h6 Obszary które obsługujemy
+							p 
+								include ../cities
+					.col-12.col-md-6.col-lg-3.text-center 
+						.card.card-primary-outline.card-rounded.card-bordered
+							h3.h6 Portale społecznościowe
+							include ../socials/socials
+					.col-12.col-md-6.col-lg-3.text-center   
+						.card.card-primary-outline.card-rounded.card-bordered
+							h3.h6 Telefon
+							a(href="tel:+99999999999").link +99999999999
+					.col-12.col-md-6.col-lg-3.text-center
+						.card.card-primary-outline.card-rounded.card-bordered
+							h3.h6 Godziny pracy
+							p 
+								include ../schedule

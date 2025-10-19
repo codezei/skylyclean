@@ -1,0 +1,16 @@
+mixin categories(categories)
+    .categories
+        each category, index in categories
+            .categories__item
+                button.btn.btn-primary.btn-small.category.btn-rhombus(
+                    type="button",
+                    class=index === 0 ? 'active' : '',
+                    data-slide=index
+                )
+                    img.category__icon.icon.icon-right(src="img/service-furniture.png", alt="")
+                    .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                    .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                    //- .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                    //- .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                    span.category__text 
+                        = category

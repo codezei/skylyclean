@@ -1,0 +1,57 @@
+section.promo#promo.bg.bg-dark
+	.container 
+		.row.flex-column-reverse.flex-lg-row
+			.col-12.col-lg-7.col-xl-8.align-self-center 
+				.block
+					.row.g-4 
+						.col-12
+							h1.promo__title.mb-0.text-uppercase Pranie tapicerki meblowej: sof, kanap, narożników, foteli, krzeseł, poduch meblowych | 
+								include ../cities
+						.col-12
+							.promo__subtitle.extractor 
+								.extractor__cleaner(data-aos="fade-left" data-aos-delay="100") 
+								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Profesjonalne czyszczenie tapicerki meblowej z plam, kurzu, sierści, roztoczy i nieprzyjemnych zapachów.
+						.col-12
+							.card.card-glass
+								span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+								span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+								span.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+								span.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+								ul.list-check.row.gy-3.gx-4.mb-0
+									li.col-12.col-md-6.col-xl-4 Dogłębne czyszczenie tkaniny i wypełnienia
+									li.col-12.col-md-6.col-xl-4 Usuwanie plam z jedzenia, napojów i codziennych zabrudzeń
+									li.col-12.col-md-6.col-xl-4 Eliminacja nieprzyjemnych zapachów i alergenów
+									li.col-12.col-md-6.col-xl-4 Bezpieczne środki dla ludzi i zwierząt
+									li.col-12.col-md-6.col-xl-4 Przedłużenie żywotności mebli
+									li.col-12.col-md-6.col-xl-4 Dojazd w dogodnym dla Ciebie terminie
+						.col-12
+							.row.g-2.justify-content-center.justify-content-lg-start 
+								.col-auto.flex-grow-1.flex-lg-grow-0
+									include ../cta-button
+			.col-12.col-lg-5.col-xl-4
+				.mask
+					.triangle.triangle-135.top-inner.left-inner
+					.triangle.triangle-45.top-inner.right-inner
+					.triangle.triangle-225.bottom-inner.left-inner
+					.triangle.triangle-315.bottom-inner.right-inner
+					.triangle.triangle-45.top-inner.left-outer.offset-x-p
+					.triangle.triangle-315.bottom-inner.left-outer.offset-x-p.d-none.d-lg-block
+					.triangle.triangle-135.top-inner.right-outer.offset-x-p
+					.triangle.triangle-225.bottom-inner.right-outer.offset-x-p.d-none.d-lg-block
+					.triangle.triangle-315.triangle-fill.bottom-inner.right-inner.offset-x-n.d-lg-none.correction-y-n
+					.triangle.triangle-225.triangle-fill.bottom-inner.left-inner.offset-x-n.d-lg-none.correction-y-n
+					.line.line-v-100.top-inner.right-outer
+					.line.line-v-100.top-inner.left-outer
+					.line.line-h-100.bottom-inner.left-inner.d-lg-none.correction-y-n
+					picture 
+						source(srcset="img/service-furniture.webp" type="image/webp" media="(max-width: 575px)")
+						source(srcset="img/service-furniture.jpg" media="(max-width: 575px)")
+						source(srcset="img/service-furniture-big.webp" type="image/webp")
+						img.mask__img(src="img/service-furniture-big.jpg" alt="pranie tapicerki meblowej" fetchpriority="high")
+					.mask__inner
+						h3.h6.mask__subtitle 
+							b.text-bold Usługi prania tapicerki: 
+							br
+							include ../cities
+							br
+							include ../schedule

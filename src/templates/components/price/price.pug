@@ -1,0 +1,102 @@
+section#price.price.block.bg-white
+	.container
+		.row.g-4
+			.col-12
+				.row.align-items-center.justify-content-between.g-2
+					.col-auto(data-aos="fade-right")
+						h2.price__title.text-uppercase.mb-0 Cennik
+					.col-auto(data-aos="fade-left")
+						include ../cta-button
+					.col-12(data-aos="fade-in") 
+						h3.price__subtitle.h6.text-light.mb-0 Wybierz kategorię i sprawdź ceny usług, których potrzebujesz
+			.col-12(data-aos="fade-in" data-aos-delay="100")
+				.categories-navigation
+					.categories-navigation-swiper
+						.swiper-button-next.categories-button-arrow
+						.swiper-button-prev.categories-button-arrow
+						.swiper-wrapper 
+							.swiper-slide
+								button.btn.btn-primary.btn-small.category-btn.btn-rounded-top.btn-bordered-top(type="button") 
+									span.category-btn__text Sprzątanie
+							.swiper-slide
+								button.btn.btn-primary.btn-small.btn-rounded-top.btn-bordered-top.category-btn(type="button") 
+									span.category-btn__text Tapicerka meblowa
+							.swiper-slide
+								button.btn.btn-primary.btn-small.btn-rounded-top.btn-bordered-top.category-btn(type="button") 
+									span.category-btn__text Materace
+							.swiper-slide
+								button.btn.btn-primary.btn-small.btn-rounded-top.btn-bordered-top.category-btn(type="button") 
+									span.category-btn__text Dywany
+							//- .swiper-slide
+							//- 	button.btn.btn-primary.btn-small.btn-rounded-top.btn-bordered-top.category-btn(type="button") 
+							//- 		span.category-btn__text Tapicerka samochodowa
+							//- .swiper-slide
+							//- 	button.btn.btn-primary.btn-small.btn-rounded-top.btn-bordered-top.category-btn(type="button") 
+							//- 		span.category-btn__text Okna
+				.categories-content.card.card-primary-outline.card-rounded-bottom.card-bordered-bottom
+					.swiper.categories-content-swiper
+						.swiper-wrapper 
+							.swiper-slide
+								.price-table
+									.row.price-table__row.g-2
+										.col-12.price-table__col
+											h4.h5.text-center.mb-0 Sprzątanie mieszkań i domów | 
+												include ../cities
+											hr
+										include cleaning
+							.swiper-slide
+								.price-table
+									.row.price-table__row.g-2
+										.col-12.price-table__col
+											h4.h5.text-center.mb-0 Ceny prania tapicerki meblowej | 
+												include ../cities
+											hr
+										include furniture
+							.swiper-slide
+								.price-table
+									.row.price-table__row.g-2
+										.col-12.price-table__col
+											h4.h5.text-center.mb-0 Ceny prania materacy | 
+												include ../cities
+											hr
+										include mattress
+							.swiper-slide
+								.price-table
+									.row.price-table__row.g-2
+										.col-12.price-table__col
+											h4.h5.text-center.mb-0 Ceny prania dywanów i wykładzin | 
+												include ../cities
+											hr
+										include carpet
+							//- .swiper-slide
+							//- 	.price-table
+							//- 		.row.price-table__row.g-2
+							//- 			.col-12.price-table__col
+							//- 				h4.h5.text-center.mb-0 Ceny prania tapicerki samochodowej | 
+							//- 					include ../cities
+							//- 				hr
+							//- 			include salon
+							//- .swiper-slide
+							//- 	.price-table
+							//- 		.row.price-table__row.g-2
+							//- 			.col-12.price-table__col
+							//- 				h4.h5.text-center.mb-0 Mycie okien | 
+							//- 					include ../cities
+							//- 				hr
+							//- 			include window
+			.col-12
+				div.text-center 
+					small
+						svg.icon.icon-right(width="16", height="16")
+							use(href="#info")
+						span Niestety nie możemy gwarantować, że każda plama poszczególna zejdzie, oraz nie gwarantujemy, że każdy nieprzyjemny zapach zniknie.
+					br
+					small
+						svg.icon.icon-right(width="16", height="16")
+							use(href="#info")
+						span Cennik jest orientacyjny. Dokładna kwota zależy od rodzaju materiału, stanu zabrudzenia, wielkości czyszczonego przedmiotu.
+					br
+					small
+						svg.icon.icon-right(width="16" height="16")
+							use(href="#info")
+						span Również mamy dodatkową opcje suszenie waszych mebli, dywanów, materaców oraz suszenie foteli auta.

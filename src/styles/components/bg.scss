@@ -1,0 +1,42 @@
+.bg {
+  background-color: var(--section-color);
+  color: var(--text-color);
+}
+
+.bg-dark {
+  --section-color: var(--fourth-color);
+  --text-color: var(--first-color);
+
+  background: linear-gradient(35deg, var(--fourth-color) 0%, var(--third-color) 80%, var(--second-color) 100%);
+
+}
+
+.bg-light {
+  position: relative;
+  z-index: 1;
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(300px);
+    position: absolute;
+    z-index: -1;
+  }
+  &:before {
+    background: var(--third-color);
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    background: var(--second-color);
+    bottom: 0;
+    right: 0;
+  }
+}
+
+
+.bg-white {
+  background: linear-gradient(to bottom, transparent 0%, #fff 25%, #fff 75%,  transparent 100%);
+}

@@ -1,0 +1,13 @@
+.text-center.beer-slider-wrapper.h-100.d-flex.align-items-center.justify-content-center
+	#cleaning-slider.beer-slider(data-beer-label="")
+		picture
+			//- source(type="image/webp" srcset="img/cleaning-before-mob.webp" media="(max-width: 430px)")
+			//- source(srcset="img/cleaning-before-mob.jpg" media="(max-width: 430px)")
+			source(type="image/webp" srcset="img/cleaning-before.webp")
+			img(src="img/cleaning-before.jpg" alt="")
+		.beer-reveal(data-beer-label="")
+			picture
+				//- source(type="image/webp" srcset="img/cleaning-after-mob.webp" media="(max-width: 430px)")
+				//- source(srcset="img/cleaning-after-mob.jpg" media="(max-width: 430px)")
+				source(type="image/webp" srcset="img/cleaning-after.webp")
+				img(src="img/cleaning-after.jpg" alt="")

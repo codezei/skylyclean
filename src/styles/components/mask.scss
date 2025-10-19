@@ -20,27 +20,39 @@ section:has(.mask) {
       // color: var(--fourth-color-125);
   
 
-
-
-
+@media screen and (max-width: 991px) {
   &:after {
     content: "";
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 8px;
+    background: var(--neutral-color);
     position: absolute;
-    left: 0;
-    top: 0;
-    
-    background: url(../img/cleaning-set-5.jpg);
-    background-position: left -50px top -50px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 3;
-    border-radius: 2rem;
-    pointer-events: none;
-
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
   }
+}
+
+
+  // &:after {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+    
+  //   background: url(../img/cleaning-set-5.jpg);
+  //   background-position: left -50px top -50px;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   z-index: 3;
+  //   border-radius: 2rem;
+  //   pointer-events: none;
+
+  // }
   &:before {
     content: "";
     display: block;

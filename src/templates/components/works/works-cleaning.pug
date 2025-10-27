@@ -1,0 +1,76 @@
+section.works.block#works.bg-light.bg-light-4
+	.container
+		.row.g-4 
+			.col-12
+				.row.align-items-center.justify-content-between.g-2
+					.col-auto(data-aos="fade-right")
+						h2.works__title.text-uppercase.mb-0 Nasze realizacje
+					.col-auto(data-aos="fade-left")
+						include ../cta-button
+					.col-12(data-aos="fade-in")
+						h3.works__subtitle.h6.text-light.mb-0 Wyczyściliśmy już setki domów – zobacz, jak pracujemy
+			.col-12(data-aos="fade-in" data-aos-delay="100")
+				.categories-navigation
+					.categories-navigation-swiper 
+						.swiper-button-next.categories-button-arrow
+						.swiper-button-prev.categories-button-arrow
+						.swiper-wrapper 
+							.swiper-slide
+								button.btn.palette-glass.size-small.rounded-top.bordered-top.category-btn(type="button") 
+									span.category-btn__text Sprzątanie
+							.swiper-slide
+								button.btn.palette-glass.size-small.rounded-top.bordered-top.category-btn(type="button") 
+									span.category-btn__text Tapicerka meblowa
+							.swiper-slide
+								button.btn.palette-glass.size-small.rounded-top.bordered-top.category-btn(type="button") 
+									span.category-btn__text Materace
+							.swiper-slide
+								button.btn.palette-glass.size-small.rounded-top.bordered-top.category-btn(type="button") 
+									span.category-btn__text Dywany
+				.categories-content.card.palette-glass.bordered-bottom.rounded-bottom.active
+					.swiper.categories-content-swiper
+						.swiper-wrapper 
+							.swiper-slide
+								//- h4.h5.text-center.mb-0 Sprzątanie mieszkań i domów | 
+								//- 	include ../cities
+								//- hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [5,6,7,8]
+										a.col(href=`img/cleaning/cleaning-img-${num}.webp`) 
+											span.sr-only Sprzątanie
+											picture.work
+												source(srcset=`img/cleaning/cleaning-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/cleaning/cleaning-img-${num}.jpg`, alt="")
+							.swiper-slide
+								//- h4.h5.text-center.mb-0 Pranie tapicerki meblowej – zdjęcia realizacji sof, foteli i kanap | 
+								//- 	include ../cities
+								//- hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [5,6,7,8]
+										a.col(href=`img/furniture/furniture-img-${num}.webp`) 
+											span.sr-only Tapicerka meblowa
+											picture.work
+												source(srcset=`img/furniture/furniture-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/furniture/furniture-img-${num}.jpg`, alt="")
+							.swiper-slide
+								//- h4.h5.text-center.mb-0 Pranie materacy – zdjęcia efektów czyszczenia materacy | 
+								//- 	include ../cities
+								//- hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [1,2,3,4]
+										a.col(href=`img/mattress/mattress-img-${num}.webp`) 
+											span.sr-only Materace
+											picture.work
+												source(srcset=`img/mattress/mattress-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/mattress/mattress-img-${num}.jpg`, alt="")
+							.swiper-slide
+								//- h4.h5.text-center.mb-0 Pranie dywanów i wykładzin – zdjęcia po chemicznym czyszczeniu dywanów i wykładzin | 
+								//- 	include ../cities
+								//- hr
+								.row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+									each num in [1,2,3,4]
+										a.col(href=`img/carpet/carpet-img-${num}.webp`) 
+											span.sr-only Dywany i wykładziny
+											picture.work
+												source(srcset=`img/carpet/carpet-img-${num}.webp`, type="image/webp")
+												img.work__img(loading="lazy", src=`img/carpet/carpet-img-${num}.jpg`, alt="")

@@ -5,49 +5,31 @@ section.promo#promo.bg.bg-dark
 				.block
 					.row.g-4
 						.col-12
-							h1.promo__title.mb-0.text-uppercase Pranie dywanów i wykładzin | 
+							h1.promo__title.mb-0.text-uppercase Pralnia i pranie dywanów. Czyszczenie wykładzin dywanowych
 								include ../cities
 						.col-12
 							.promo__subtitle.extractor 
 								.extractor__cleaner(data-aos="fade-left" data-aos-delay="100") 
-								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Profesjonalne czyszczenie dywanów i wykładzin z zabrudzeń, kurzu, sierści zwierząt, plam i zapachów.
+								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Skuteczne pranie dywanów metodą ekstrakcyjną i na wskroś. Usuwamy brud, plamy, sierść, roztocza i alergeny.
 						.col-12
-							.card.card-glass
-								span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
-								span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
-								span.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
-								span.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+							.card.palette-glass.rounded.bordered 
 								ul.list-check.row.gy-3.gx-4.mb-0
-									li.col-12.col-md-6.col-xl-4 Dogłębne czyszczenie dywanów z kurzu i alergenów
-									li.col-12.col-md-6.col-xl-4 Usuwanie plam i nieprzyjemnych zapachów
-									li.col-12.col-md-6.col-xl-4 Przywracanie kolorów i struktury runa
-									li.col-12.col-md-6.col-xl-4 Bezpieczne środki dla dzieci i zwierząt
-									li.col-12.col-md-6.col-xl-4 Pracujemy z każdym rodzajem dywanów i wykładzin
-									li.col-12.col-md-6.col-xl-4 Dojazd w dogodnym dla Ciebie terminie
+									li.col-12.col-md-6.col-xl-4 Pranie dywanów Shaggy, wełnianych, syntetycznych i orientalnych
+									li.col-12.col-md-6.col-xl-4 Czyszczenie wykładzin biurowych i domowych
+									li.col-12.col-md-6.col-xl-4 Profesjonalne usuwanie trudnych plam, sierści i nieprzyjemnych zapachów
+									li.col-12.col-md-6.col-xl-4 Gwarancja antyroztoczowa i bezpłatne ozonowanie dywanu
+									li.col-12.col-md-6.col-xl-4 Bezpłatny odbiór i dowóz dywanów w Katowicach
+									li.col-12.col-md-6.col-xl-4 Proces prania na wskroś (usuwanie brudu z rdzenia włókien)
 						.col-12
 							.row.g-2.justify-content-center.justify-content-lg-start 
 								.col-auto.flex-grow-1.flex-lg-grow-0
 									include ../cta-button
 			.col-12.col-lg-5.col-xl-4
 				.mask
-					.triangle.triangle-135.top-inner.left-inner
-					.triangle.triangle-45.top-inner.right-inner
-					.triangle.triangle-225.bottom-inner.left-inner
-					.triangle.triangle-315.bottom-inner.right-inner
-					.triangle.triangle-45.top-inner.left-outer.offset-x-p
-					.triangle.triangle-315.bottom-inner.left-outer.offset-x-p.d-none.d-lg-block
-					.triangle.triangle-135.top-inner.right-outer.offset-x-p
-					.triangle.triangle-225.bottom-inner.right-outer.offset-x-p.d-none.d-lg-block
-					.triangle.triangle-315.triangle-fill.bottom-inner.right-inner.offset-x-n.d-lg-none.correction-y-n
-					.triangle.triangle-225.triangle-fill.bottom-inner.left-inner.offset-x-n.d-lg-none.correction-y-n
-					.line.line-v-100.top-inner.right-outer
-					.line.line-v-100.top-inner.left-outer
-					.line.line-h-100.bottom-inner.left-inner.d-lg-none.correction-y-n
-					picture 
-						source(srcset="img/service-carpet.webp" type="image/webp" media="(max-width: 575px)")
-						source(srcset="img/service-carpet.jpg" media="(max-width: 575px)")
-						source(srcset="img/service-carpet-big.webp" type="image/webp")
-						img.mask__img(src="img/service-carpet-big.jpg" alt="pranie dywanów" fetchpriority="high")
+					.semicircles.semicircles-top.semicircles-left
+					.semicircles.semicircles-top.semicircles-right
+					.semicircles.semicircles-bottom.semicircles-left.d-none.d-lg-block
+					.semicircles.semicircles-bottom.semicircles-right.d-none.d-lg-block
 					.mask__inner
 						h3.h6.mask__subtitle 
 							b.text-bold Usługi prania dywanów i wykładzin: 
@@ -55,3 +37,5 @@ section.promo#promo.bg.bg-dark
 							include ../cities
 							br
 							include ../schedule
+						.mask__timer
+							include ../timer

@@ -23,7 +23,9 @@
         // padding: 0.75rem;
         // transition: all 400ms;
         // flex-grow: 1;
-        &__value {
+
+    }
+            &-value {
             position: relative;
             padding-left: calc(1em + 0.5rem);
             &:before {
@@ -41,7 +43,6 @@
 
             }
         }
-    }
 
 }
 

@@ -1,42 +1,92 @@
-.bg {
-  background-color: var(--section-color);
-  color: var(--text-color);
-}
 
 .bg-dark {
-  --section-color: var(--fourth-color);
-  --text-color: var(--first-color);
+  
+  color: var(--first-color);
+  position: relative;
+  background: url(../img/foam-1.jpg);
+  background-size: cover;
+  box-shadow: inset 0 5px 0 red;
 
-  background: linear-gradient(35deg, var(--fourth-color) 0%, var(--third-color) 80%, var(--second-color) 100%);
-
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(100px);
+    box-shadow: inset 0 1px 0 var(--neutral-color), inset 0 -1px 0 var(--neutral-color);
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
 }
 
 .bg-light {
   position: relative;
   z-index: 1;
-  &:before, &:after {
-    content: "";
-    display: block;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    filter: blur(300px);
-    position: absolute;
-    z-index: -1;
-  }
   &:before {
-    background: var(--third-color);
-    top: 0;
-    left: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0.4;
+      z-index: -1;
   }
-  &:after {
-    background: var(--second-color);
-    bottom: 0;
-    right: 0;
+  &-1 {
+    &:before {
+      background-image: linear-gradient(to bottom, #fff 0%, transparent 50%, #fff 100%), url(../img/bg-light-1.jpg);
+      background-size: cover, cover;
+      background-position: center, center;
+      background-repeat: no-repeat;
+    }
   }
-}
+  &-2 {
+    &:before {
+      background-image: linear-gradient(to bottom, #fff 0%, transparent 50%, #fff 100%), url(../img/bg-light-2.jpg);
+      background-size: cover, cover;
+      background-position: center, right center;
+      background-repeat: no-repeat;
+    }
+  }
+  &-3 {
+    &:before {
+      background-image: linear-gradient(to bottom, #fff 0%, transparent 50%, #fff 100%), url(../img/bg-light-3.jpg);
+      background-size: cover, cover;
+      background-position: center, center;
+      background-repeat: no-repeat;
+    }
+  }
+  &-4 {
+    &:before {
+      background-image: linear-gradient(to bottom, #fff 0%, transparent 50%, #fff 100%), url(../img/bg-light-4.jpg);
+      background-size: cover, cover;
+      background-position: center, center;
+      background-repeat: no-repeat;
+    }
+  }
+  &-5 {
+    &:before {
+      background-image: linear-gradient(to bottom, #fff 0%, transparent 50%, #fff 100%), url(../img/bg-light-5.jpg);
+      background-size: cover, cover;
+      background-position: center, center;
+      background-repeat: no-repeat;
+    }
+  }
+  &-6 {
+    &:before {
+      background-image: linear-gradient(to bottom, #fff 0%, transparent 50%, #fff 100%), url(../img/bg-light-6.jpg);
+      background-size: cover, cover;
+      background-position: center, center bottom;
+      background-repeat: no-repeat;
+    }
+  }
 
-
-.bg-white {
-  background: linear-gradient(to bottom, transparent 0%, #fff 25%, #fff 75%,  transparent 100%);
 }

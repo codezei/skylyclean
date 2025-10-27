@@ -1,4 +1,4 @@
-section.reviews.block#reviews
+section.reviews.block#reviews.bg-light.bg-light-5
 	.container
 		.row.g-4 
 			.col-12
@@ -7,40 +7,23 @@ section.reviews.block#reviews
 						h2.reviews__title.text-uppercase.mb-0 Opinie
 					.col-auto(data-aos="fade-left") 
 						.swiper-navigation
-							.reviews-button-prev.btn.btn-third.btn-small
-								.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+							.reviews-button-prev.btn.palette-third.size-small.rounded
 								svg.bi.bi-chevron-left(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16")
 									path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0")
-							.reviews-button-next.btn.btn-third.btn-small
-								.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+							.reviews-button-next.btn.palette-third.size-small.rounded
 								svg.bi.bi-chevron-right(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16")
 									path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708")
 					.col-12(data-aos="fade-in") 
-						h3.reviews__subtitle.h4.h6.text-light.mb-0 Opinie klientów, którzy skorzystali z naszych usług 
-							span we 
-							include ../cities
+						h3.reviews__subtitle.h4.h6.text-light.mb-0 Opinie o Pralni Dywanów i Czyszczeniu Wykładzin Katowice
 			.col-12(data-aos="fade-in" data-aos-delay="100") 
 				.swiper.reviews-swiper 
 					.swiper-wrapper
 						.swiper-slide
-							.review.card.card-primary-outline 
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered 
 								.review__header
-									h4.h6.review__name Natalia Bakreva
+									h4.h6.review__name Robert
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Jestem bardzo zadowolona z usługi czyszczenia tapicerki! Sofa wygląda jak nowa – wszystkie plamy i zabrudzenia zniknęły, a materiał odzyskał świeżość i kolor. Ekipa działała szybko, profesjonalnie i zostawiła po sobie idealny porządek. Na pewno skorzystam ponownie i polecam każdemu, kto chce odświeżyć meble w swoim domu. 🌟…
-									picture 
-										source(srcset="img/review-img-1.webp" type="image/webp")
-										img.review__img(src="img/review-img-1.jpg", alt="", loading="lazy")
+								p.review__text Moja podłoga w biurze była pokryta brudną wykładziną. Czyszczenie wykładziny w Katowicach przez Skylyclean to strzał w dziesiątkę. Użyli ekstraktora i szorowarki, efekt niesamowity.
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -51,15 +34,11 @@ section.reviews.block#reviews
 											use(href="#eye-close")
 										| Pokaż mniej
 						.swiper-slide
-							.review.card.card-primary-outline 
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered 
 								.review__header
-									h4.h6.review__name Ola K
+									h4.h6.review__name Alicja
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Polecam firmę Top Tap Clean. Wszystkie plamy z mojej kanapy oraz poduszek zniknęły. Bardzo szybki termin realizacji, miła obsługa i dobra cena.
+								p.review__text Oddałam do prania duży dywan Shaggy. Obawiałam się, że się zniszczy. Pranie na wskroś i usunięcie piasku z głębi dało efekt czystości, jakiego nie miałam od lat.
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -70,15 +49,11 @@ section.reviews.block#reviews
 											use(href="#eye-close")
 										| Pokaż mniej
 						.swiper-slide
-							.review.card.card-primary-outline 
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered 
 								.review__header
-									h4.h6.review__name EFEKT NR GRANIT
+									h4.h6.review__name Michał
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Miałem ogromny problem z zapachem moczu kota na sofie. Żadne domowe sposoby nie pomagały, a nieprzyjemny zapach utrzymywał się tygodniami. Ekipa poradziła sobie perfekcyjnie – kanapa jest czysta, świeża i pachnie jak nowa. Jestem zachwycona efektem i polecam każdemu właścicielowi zwierząt! 🐾✨…
+								p.review__text Świetna usługa! Zleciłem pranie dywanów wełnianych, które były mocno zabrudzone po budowie. Bardzo doceniam bezpłatny odbiór i dowóz w Katowicach.
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -89,15 +64,11 @@ section.reviews.block#reviews
 											use(href="#eye-close")
 										| Pokaż mniej
 						.swiper-slide
-							.review.card.card-primary-outline 
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered 
 								.review__header
-									h4.h6.review__name Alicja GALIŃSKA
+									h4.h6.review__name Elżbieta
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Jestem akurat po praniu narożnika,usługa wykonana profesjonalnie i szybko aż się zdziwiłam...ale narożnik odświeżonym,czysty i pachnący.Dzięki za profesjonalizm..będę polecać dalej , na pewno jeszcze skorzystam .Pozdrawiam
+								p.review__text Cena za pranie dywanu była bardzo dobra w stosunku do jakości. Dodatkowo w pakiecie zrobili darmowe ozonowanie, co dla mnie jako alergika było bardzo ważne.
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -108,18 +79,11 @@ section.reviews.block#reviews
 											use(href="#eye-close")
 										| Pokaż mniej
 						.swiper-slide
-							.review.card.card-primary-outline 
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered 
 								.review__header
-									h4.h6.review__name Elżbieta Lempart
+									h4.h6.review__name Kamil
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Serdecznie polecam usługi firmy Top Tap Clean. Pan szybko i profesjonalnie podjął się umycia dużych okien w całym domu. Okna są czyste, że aż lśnią. Solidna firma i atrakcyjne ceny 😊…
-									picture 
-										source(srcset="img/review-img-3.webp" type="image/webp")
-										img.review__img(src="img/review-img-3.jpg", alt="", loading="lazy")
+								p.review__text Nasz dywan dziecięcy zyskał drugie życie. Zniknęły plamy po farbkach i jedzeniu. Polecam każdemu, kto ma dzieci i potrzebuje higienicznej czystości.
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -130,15 +94,11 @@ section.reviews.block#reviews
 											use(href="#eye-close")
 										| Pokaż mniej
 						.swiper-slide
-							.review.card.card-primary-outline 
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered 
 								.review__header
-									h4.h6.review__name Janusz Antczak
+									h4.h6.review__name Beata
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Jestem bardzo zadowolony z prania tapicerki i podsufitki samochodowej wykonanej przez firmę Top Tap Clean wykonanie profesjonalne i na wysokim poziomie jest to firma godna polecenia.
+								p.review__text Zawsze miałam problem z dywanami orientalnymi. Tutaj wiedzą, jak się z nimi obchodzić. Materiał jest miękki i nie stracił koloru.
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -149,15 +109,11 @@ section.reviews.block#reviews
 											use(href="#eye-close")
 										| Pokaż mniej
 						.swiper-slide
-							.review.card.card-primary-outline  
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered  
 								.review__header
-									h4.h6.review__name Agnieszka Agnieszka
+									h4.h6.review__name Jacek
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Pan wyprał dwie wersalki bardzo szybko i dokładnie. Meble są jak nowe – czyste i pachnące. Sprawdził pH chemii, co było dla mnie ważne, bo mam małe dziecko. Wszystko odbyło się bezpiecznie, sprawnie i w miłej atmosferze. Pełen profesjonalizm i porządek po zakończeniu pracy. Polecam z czystym sumieniem! :)
+								p.review__text Najważniejsze, że usunęli mi stary i uporczywy zapach stęchlizny z dywanu z piwnicy. Po praniu dywanu i ozonowaniu jest po prostu neutralnie i czysto.
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -168,15 +124,11 @@ section.reviews.block#reviews
 											use(href="#eye-close")
 										| Pokaż mniej
 						.swiper-slide
-							.review.card.card-primary-outline  
-								.triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
-								.triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
-								.triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+							.review.card.palette-glass.rounded.bordered  
 								.review__header
-									h4.h6.review__name Mirosław Sawicki
+									h4.h6.review__name Dominika
 									.rating.review__rating(style="--star-rating: 5;")
-								p.review__text Polecam Pana Dmitro - to fachowiec, który zna swoją sprawę.  Tapicerka wersalki po praniu jest jak nowa. Co więcej, kontrola pH po praniu i materiały najwyższej jakości. Latwy kontakt,  szybka realizacja i świetny wynik. Gorąco polecam.
+								p.review__text Szukałam pralni dywanów z dojazdem. Obsługa miła, terminowa. Dywan wrócił do mnie czysty, pachnący i odpowiednio zabezpieczony. Będę polecać!
 								.review__toggle
 									span.in-active-none 
 										svg.icon.icon-right(width="16" height="16")
@@ -188,5 +140,5 @@ section.reviews.block#reviews
 										| Pokaż mniej
 			.col-12 
 				.text-center
-					a(href="https://goo.gl/maps/A5t7SypU83NrAAxQA" target="_blank") Tutaj
+					a(href="" target="_blank") Tutaj
 					| &nbsp;możesz przeczytać wszystkie recenzje i zostawić własne.

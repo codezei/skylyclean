@@ -1,0 +1,136 @@
+extends settings/layout
+
+prepend html
+	- const lang = "pl";
+
+prepend head
+	- const pageTitle = "Firma sprzątająca Katowice: Sprzątanie mieszkań, domów i czyszczenie tapicerki – Skylyclean"
+	- const pageDescription = "Skylyclean – profesjonalne sprzątanie mieszkań i domów w Katowicach od 200 zł. Oferujemy: sprzątanie po remoncie, mycie okien, czyszczenie piekarników, dywanów i mebli. Sprawdź cennik!"
+	- const pageKeywords = "sprzątanie mieszkań Katowice, firma sprzątająca Katowice, sprzątanie domów Katowice, sprzątanie po remoncie Katowice, czyszczenie tapicerki Katowice, mycie okien Katowice, pranie dywanów Katowice, czyszczenie piekarnika, sprzątanie Katowice cennik"
+	- const pageUrl = "sprzatanie-mieszkan.html"
+	- const pageImage = "img/logo.jpg"
+	- const twitterImage = "img/logo.jpg"
+	- const themeColor = "#ffffff"
+
+append head
+	//- script(type="application/ld+json").
+	//- 	{
+	//- 	"@context": "https://schema.org",
+	//- 	"@graph": [
+	//- 		{
+	//- 		"@type": "BreadcrumbList",
+	//- 		"itemListElement": [
+	//- 			{
+	//- 			"@type": "ListItem",
+	//- 			"position": 1,
+	//- 			"name": "Strona główna",
+	//- 			"item": "https://cleantapi.pl/"
+	//- 			},
+	//- 			{
+	//- 			"@type": "ListItem",
+	//- 			"position": 2,
+	//- 			"name": "Sprzątanie mieszkań, domów i biur",
+	//- 			"item": "https://cleantapi.pl/sprzatanie-mieszkan-domow-biurow-wroclaw/"
+	//- 			}
+	//- 		]
+	//- 		},
+	//- 		{
+	//- 		"@type": "Service",
+	//- 		"name": "Sprzątanie mieszkań, domów i biur",
+	//- 		"serviceType": "Usługi sprzątania pomieszczeń mieszkalnych i komercyjnych",
+	//- 		"description": "Profesjonalne sprzątanie mieszkań, domów i biur we Wrocławiu i okolicach. Sprzątanie cykliczne, generalne lub po remoncie. Ekologiczne środki i nowoczesny sprzęt.",
+	//- 		"areaServed": [
+	//- 			{ "@type": "City", "name": "Wrocław" },
+	//- 			{ "@type": "City", "name": "Jelcz-Laskowice" },
+	//- 			{ "@type": "City", "name": "Oleśnica" },
+	//- 			{ "@type": "City", "name": "Brzeg" },
+	//- 			{ "@type": "City", "name": "Oława" }
+	//- 		],
+	//- 		"provider": {
+	//- 			"@type": ["LocalBusiness", "CleaningService"],
+	//- 			"name": "Cleantapi",
+	//- 			"url": "https://cleantapi.pl",
+	//- 			"telephone": "+48 575 256 496",
+	//- 			"email": "norovvitalikjaegarn@gmail.com",
+	//- 			"address": {
+	//- 			"@type": "PostalAddress",
+	//- 			"addressLocality": "Wrocław",
+	//- 			"addressCountry": "PL"
+	//- 			}
+	//- 		},
+	//- 		"termsOfService": "https://cleantapi.pl/",
+	//- 		"availableChannel": {
+	//- 			"@type": "ServiceChannel",
+	//- 			"servicePhone": {
+	//- 			"@type": "ContactPoint",
+	//- 			"telephone": "+48 575 256 496",
+	//- 			"contactType": "customer service",
+	//- 			"areaServed": "PL"
+	//- 			}
+	//- 		}
+	//- 		},
+	//- 		{
+	//- 		"@type": "FAQPage",
+	//- 		"mainEntity": [
+	//- 			{
+	//- 			"@type": "Question",
+	//- 			"name": "Jakie rodzaje sprzątania oferujecie?",
+	//- 			"acceptedAnswer": {
+	//- 				"@type": "Answer",
+	//- 				"text": "Oferujemy sprzątanie mieszkań, domów i biur — zarówno regularne, jak i jednorazowe, np. po remoncie czy przeprowadzce."
+	//- 			}
+	//- 			},
+	//- 			{
+	//- 			"@type": "Question",
+	//- 			"name": "Czy używane środki są bezpieczne?",
+	//- 			"acceptedAnswer": {
+	//- 				"@type": "Answer",
+	//- 				"text": "Tak. Używamy ekologicznych i bezpiecznych dla zdrowia środków czyszczących."
+	//- 			}
+	//- 			},
+	//- 			{
+	//- 			"@type": "Question",
+	//- 			"name": "Czy można zamówić usługę w weekend?",
+	//- 			"acceptedAnswer": {
+	//- 				"@type": "Answer",
+	//- 				"text": "Tak, działamy od poniedziałku do soboty w godzinach 7:00 – 22:00. Sprzątanie w niedzielę — po wcześniejszym ustaleniu."
+	//- 			}
+	//- 			},
+	//- 			{
+	//- 			"@type": "Question",
+	//- 			"name": "Czy trzeba być obecnym podczas sprzątania?",
+	//- 			"acceptedAnswer": {
+	//- 				"@type": "Answer",
+	//- 				"text": "Nie ma takiej konieczności, ale zawsze ustalamy indywidualnie preferencje klienta."
+	//- 			}
+	//- 			}
+	//- 		]
+	//- 		}
+	//- 	],
+	//- 	"sameAs": [
+	//- 		"https://www.facebook.com/Cleantapi/",
+	//- 		"https://vm.tiktok.com/ZMNuDPJg2/",
+	//- 		"https://g.co/kgs/vs8CZY"
+	//- 	]
+	//- 	}
+
+append content
+	script. 
+		const initialCategory = 0;
+	include components/header/header-2
+	main
+		include components/promo/promo-cleaning
+		include components/price/price
+		//- include components/why
+		include components/process/process
+		include components/how
+		include components/reviews/reviews-cleaning
+		include components/cta
+		include components/works/works-cleaning
+		include components/faq/faq-cleaning
+		include components/contacts
+		include components/popup
+		include components/icons
+	include components/footer
+
+append scripts

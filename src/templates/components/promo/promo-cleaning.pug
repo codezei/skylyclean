@@ -1,0 +1,44 @@
+section.promo#promo.bg.bg-dark
+	.container 
+		.row.flex-column-reverse.flex-lg-row
+			.col-12.col-lg-7.col-xl-8.align-self-center 
+				.block
+					.row.g-4
+						.col-12
+							h1.promo__title.mb-0.text-uppercase Firma sprzątająca Skylyclean: Sprzątanie mieszkań, domów i czyszczenie tapicerki 
+								include ../cities
+						.col-12
+							.promo__subtitle.extractor 
+								.extractor__cleaner(data-aos="fade-left" data-aos-delay="100") 
+								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Kompleksowe usługi w Katowicach: sprzątanie po remoncie, mycie okien i urządzeń (piekarników, lodówek, okapów). Sprawdź nasz cennik!
+						.col-12
+							.card.palette-glass.rounded.bordered 
+								ul.list-check.row.gy-3.gx-4.mb-0
+									li.col-12.col-md-6.col-xl-4 Firma sprzątająca Katowice: Sprzątanie mieszkań i domów
+									li.col-12.col-md-6.col-xl-4 Sprzątanie po remoncie i po przeprowadzce (gruntowne)
+									li.col-12.col-md-6.col-xl-4 Kompleksowe mycie kuchni, łazienek oraz okien
+									li.col-12.col-md-6.col-xl-4 Czyszczenie urządzeń AGD: piekarnik, mikrofala, lodówka (opcjonalnie)
+									li.col-12.col-md-6.col-xl-4 Gruntowne odkurzanie i mycie podłóg (usuwanie kurzu i brudu)
+									li.col-12.col-md-6.col-xl-4 Używamy profesjonalnych środków czyszczących (bezpiecznych dla zdrowia)
+									li.col-12.col-md-6.col-xl-4 Sprzątanie abonamentowe (cykliczne) i jednorazowe
+									li.col-12.col-md-6.col-xl-4 Gwarancja dokładności i pełne zadowolenie Klienta
+									li.col-12.col-md-6.col-xl-4 Pranie tapicerki, materacy i dywanów (ekstrakcyjne czyszczenie)
+						.col-12
+							.row.g-2.justify-content-center.justify-content-lg-start 
+								.col-auto.flex-grow-1.flex-lg-grow-0
+									include ../cta-button
+			.col-12.col-lg-5.col-xl-4
+				.mask
+					.semicircles.semicircles-top.semicircles-left
+					.semicircles.semicircles-top.semicircles-right
+					.semicircles.semicircles-bottom.semicircles-left.d-none.d-lg-block
+					.semicircles.semicircles-bottom.semicircles-right.d-none.d-lg-block
+					.mask__inner
+						h3.h6.mask__subtitle 
+							b.text-bold Usługi sprzątające mieszkań i domów:
+							br
+							include ../cities
+							br
+							include ../schedule
+						.mask__timer
+							include ../timer

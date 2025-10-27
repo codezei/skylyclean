@@ -1,0 +1,40 @@
+section.process#process-cleaning.block.bg.bg-light.bg-light-2
+	.container
+		.row.g-4 
+			.col-12
+				.row.align-items-center.justify-content-between.g-2
+					.col-auto(data-aos="fade-right")
+						h2.process__title.text-uppercase.mb-0 Proces prania
+					.col-auto(data-aos="fade-left")
+						include ../cta-button
+					.col-12(data-aos="fade-in")
+						h3.h6.process__subtitle.text-light.mb-0 Zobacz, jak wygląda cały proces czyszczenia tapicerki
+			.col-12.categories(data-aos="fade-in")  
+				.categories-navigation
+					.categories-navigation-swiper 
+						.swiper-button-next.categories-button-arrow
+						.swiper-button-prev.categories-button-arrow
+						.swiper-wrapper 
+							.swiper-slide
+								button.btn.palette-glass.size-small.category-btn.rounded-top.bordered-top(type="button") 
+									span.category-btn__text Sprzątanie
+							.swiper-slide
+								button.btn.palette-glass.size-small.category-btn.rounded-top.bordered-top(type="button") 
+									span.category-btn__text Tapicerka meblowa
+							.swiper-slide
+								button.btn.palette-glass.size-small.category-btn.rounded-top.bordered-top(type="button") 
+									span.category-btn__text Materace
+							.swiper-slide
+								button.btn.palette-glass.size-small.category-btn.rounded-top.bordered-top(type="button") 
+									span.category-btn__text Dywany
+				.categories-content.flex-grow-1.d-flex.align-items-center.card.palette-glass.bordered-bottom.rounded-bottom.active 
+					.swiper.categories-content-swiper(data-disallow-touch="true") 
+						.swiper-wrapper 
+							.swiper-slide.h-auto
+								include cleaning
+							.swiper-slide.h-auto
+								include furniture
+							.swiper-slide.h-auto
+								include mattress
+							.swiper-slide.h-auto
+								include carpet

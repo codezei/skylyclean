@@ -1,0 +1,148 @@
+extends settings/layout
+
+prepend html
+	- const lang = "pl";
+
+prepend head
+	- const pageTitle = "Pranie tapicerki meblowej Katowice: Czyszczenie kanap, narożników i foteli. Cennik"
+	- const pageDescription = "Profesjonalne pranie tapicerki w Katowicach metodą ekstrakcyjną. Usuwanie plam, roztoczy i sierści. Sprawdź nasz cennik czyszczenia kanap, narożników i krzeseł!"
+	- const pageKeywords = "pranie tapicerki Katowice, czyszczenie kanap Katowice, czyszczenie narożników Katowice, pranie foteli Katowice, pranie krzeseł Katowice, czyszczenie tapicerki meblowej, pranie sofy cena Katowice"
+	- const pageUrl = "pranie-tapicerki-meblowej.html"
+	- const pageImage = "img/logo.jpg"
+	- const twitterImage = "img/logo.jpg"
+	- const themeColor = "#ffffff"
+
+
+append head
+	//- link(rel="preload" href="fonts/cormorant-garamond-v20-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+	//- link(rel="preload" href="fonts/cormorant-garamond-v20-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+	//- script(type="application/ld+json").
+	//- 	{
+	//- 	"@context": "https://schema.org",
+	//- 	"@graph": [
+	//- 	{
+	//- 	"@type": "BreadcrumbList",
+	//- 	"itemListElement": [
+	//- 		{
+	//- 		"@type": "ListItem",
+	//- 		"position": 1,
+	//- 		"name": "Strona główna",
+	//- 		"item": "https://toptapiclean.pl/"
+	//- 		},
+	//- 		{
+	//- 		"@type": "ListItem",
+	//- 		"position": 2,
+	//- 		"name": "Pranie tapicerki meblowej",
+	//- 		"item": "https://toptapiclean.pl/pranie-tapicerki-meblowej.html"
+	//- 		}
+	//- 	]
+	//- 	},
+	//- 	{
+	//- 	"@type": "Service",
+	//- 	"name": "Pranie tapicerki meblowej",
+	//- 	"serviceType": "Czyszczenie i pranie tapicerki meblowej",
+	//- 	"description": "Profesjonalne pranie tapicerki meblowej: usuwanie plam, kurzu, alergenów i nieprzyjemnych zapachów. Bezpieczne środki, szybkie schnięcie, obsługa w Nysie, Głuchołazach i Otmuchowie.",
+	//- 	"areaServed": [
+	//- 	{
+	//- 	"@type": "Place",
+	//- 	"name": "Nysa"
+	//- 	},
+	//- 	{
+	//- 	"@type": "Place",
+	//- 	"name": "Głuchołazy"
+	//- 	},
+	//- 	{
+	//- 	"@type": "Place",
+	//- 	"name": "Otmuchów"
+	//- 	}
+	//- 	],
+	//- 	"provider": {
+	//- 	"@type": ["LocalBusiness", "CleaningService"],
+	//- 	"name": "TopTapiClean",
+	//- 	"url": "https://toptapiclean.pl",
+	//- 	"telephone": "+48884412928",
+	//- 	"email": "top.tap@wp.pl",
+	//- 	"address": {
+	//- 	"@type": "PostalAddress",
+	//- 	"addressLocality": "Nysa",
+	//- 	"addressCountry": "PL"
+	//- 	}
+	//- 	},
+	//- 	"termsOfService": "https://toptapiclean.pl/",
+	//- 	"availableChannel": {
+	//- 	"@type": "ServiceChannel",
+	//- 	"servicePhone": {
+	//- 	"@type": "ContactPoint",
+	//- 	"telephone": "+48884412928",
+	//- 	"contactType": "customer service",
+	//- 	"areaServed": "PL"
+	//- 	}
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "FAQPage",
+	//- 	"mainEntity": [
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Jak często należy prać tapicerkę meblową w domu?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Tapicerkę zaleca się prać co 6–12 miesięcy, w zależności od intensywności użytkowania i obecności dzieci lub zwierząt w domu."
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Czy pranie kanapy usuwa roztocza i alergeny?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Tak, profesjonalne pranie skutecznie usuwa roztocza, kurz i alergeny, poprawiając jakość powietrza w pomieszczeniu."
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Ile czasu schnie tapicerka po profesjonalnym czyszczeniu?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Zwykle proces schnięcia trwa od 4 do 8 godzin, w zależności od rodzaju materiału i wentylacji pomieszczenia, lub skorzystaj z usługi suszenia."
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Czy wszystkie plamy da się całkowicie usunąć?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Większość świeżych i typowych zabrudzeń można usunąć, jednak stare i głęboko wchłonięte plamy mogą pozostać mniej widoczne, ale nie zawsze znikają całkowicie."
+	//- 	}
+	//- 	}
+	//- 	]
+	//- 	}
+	//- 	],
+	//- 	"sameAs": [
+	//- 	"https://www.facebook.com/profile.php?id=61558390682562",
+	//- 	"https://www.tiktok.com/@toptapclean?_t=8lieXgIxd56&amp;_r=1",
+	//- 	"https://goo.gl/maps/A5t7SypU83NrAAxQA"
+	//- 	]
+	//- 	}
+
+
+
+append content
+	script. 
+		const initialCategory = 1;
+	include components/header/header-2
+	main
+		include components/promo/promo-furniture
+		include components/price/price
+		//- include components/why
+		include components/process/process
+		include components/how
+		include components/reviews/reviews-furniture
+		include components/cta
+		include components/works/works-furniture
+		include components/faq/faq-furniture
+		include components/contacts
+		include components/popup
+		include components/icons
+	include components/footer
+
+append scripts

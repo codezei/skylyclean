@@ -5,49 +5,31 @@ section.promo#promo.bg.bg-dark
 				.block
 					.row.g-4 
 						.col-12
-							h1.promo__title.mb-0.text-uppercase Pranie tapicerki meblowej: sof, kanap, narożników, foteli, krzeseł, poduch meblowych | 
+							h1.promo__title.mb-0.text-uppercase Pranie tapicerki meblowej: Czyszczenie kanap, narożników i foteli 
 								include ../cities
 						.col-12
 							.promo__subtitle.extractor 
 								.extractor__cleaner(data-aos="fade-left" data-aos-delay="100") 
-								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Profesjonalne czyszczenie tapicerki meblowej z plam, kurzu, sierści, roztoczy i nieprzyjemnych zapachów.
+								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Profesjonalne czyszczenie tapicerki metodą ekstrakcyjną. Usuwamy plamy, sierść, roztocza i nieprzyjemne zapachy.
 						.col-12
-							.card.card-glass
-								span.triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
-								span.triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
-								span.triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
-								span.triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+							.card.palette-glass.rounded.bordered 
 								ul.list-check.row.gy-3.gx-4.mb-0
-									li.col-12.col-md-6.col-xl-4 Dogłębne czyszczenie tkaniny i wypełnienia
-									li.col-12.col-md-6.col-xl-4 Usuwanie plam z jedzenia, napojów i codziennych zabrudzeń
-									li.col-12.col-md-6.col-xl-4 Eliminacja nieprzyjemnych zapachów i alergenów
-									li.col-12.col-md-6.col-xl-4 Bezpieczne środki dla ludzi i zwierząt
-									li.col-12.col-md-6.col-xl-4 Przedłużenie żywotności mebli
-									li.col-12.col-md-6.col-xl-4 Dojazd w dogodnym dla Ciebie terminie
+									li.col-12.col-md-6.col-xl-4 Ekstrakcyjne pranie tapicerki meblowej (dogłębne czyszczenie)
+									li.col-12.col-md-6.col-xl-4 Skuteczne usuwanie trudnych plam z kanap i narożników (kawa, wino, tłuszcz)
+									li.col-12.col-md-6.col-xl-4 Eliminacja roztoczy, sierści, alergenów i nieprzyjemnych zapachów
+									li.col-12.col-md-6.col-xl-4 Bezpieczne środki chemiczne dla dzieci i zwierząt domowych
+									li.col-12.col-md-6.col-xl-4 Przedłużenie żywotności Twoich mebli tapicerowanych
+									li.col-12.col-md-6.col-xl-4 Darmowy dojazd na usługę na terenie Katowic i okolic
 						.col-12
 							.row.g-2.justify-content-center.justify-content-lg-start 
 								.col-auto.flex-grow-1.flex-lg-grow-0
 									include ../cta-button
 			.col-12.col-lg-5.col-xl-4
 				.mask
-					.triangle.triangle-135.top-inner.left-inner
-					.triangle.triangle-45.top-inner.right-inner
-					.triangle.triangle-225.bottom-inner.left-inner
-					.triangle.triangle-315.bottom-inner.right-inner
-					.triangle.triangle-45.top-inner.left-outer.offset-x-p
-					.triangle.triangle-315.bottom-inner.left-outer.offset-x-p.d-none.d-lg-block
-					.triangle.triangle-135.top-inner.right-outer.offset-x-p
-					.triangle.triangle-225.bottom-inner.right-outer.offset-x-p.d-none.d-lg-block
-					.triangle.triangle-315.triangle-fill.bottom-inner.right-inner.offset-x-n.d-lg-none.correction-y-n
-					.triangle.triangle-225.triangle-fill.bottom-inner.left-inner.offset-x-n.d-lg-none.correction-y-n
-					.line.line-v-100.top-inner.right-outer
-					.line.line-v-100.top-inner.left-outer
-					.line.line-h-100.bottom-inner.left-inner.d-lg-none.correction-y-n
-					picture 
-						source(srcset="img/service-furniture.webp" type="image/webp" media="(max-width: 575px)")
-						source(srcset="img/service-furniture.jpg" media="(max-width: 575px)")
-						source(srcset="img/service-furniture-big.webp" type="image/webp")
-						img.mask__img(src="img/service-furniture-big.jpg" alt="pranie tapicerki meblowej" fetchpriority="high")
+					.semicircles.semicircles-top.semicircles-left
+					.semicircles.semicircles-top.semicircles-right
+					.semicircles.semicircles-bottom.semicircles-left.d-none.d-lg-block
+					.semicircles.semicircles-bottom.semicircles-right.d-none.d-lg-block
 					.mask__inner
 						h3.h6.mask__subtitle 
 							b.text-bold Usługi prania tapicerki: 
@@ -55,3 +37,5 @@ section.promo#promo.bg.bg-dark
 							include ../cities
 							br
 							include ../schedule
+						.mask__timer
+							include ../timer

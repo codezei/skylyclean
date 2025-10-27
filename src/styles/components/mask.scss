@@ -21,17 +21,19 @@ section:has(.mask) {
   
 
 @media screen and (max-width: 991px) {
-  &:after {
-    content: "";
-    display: block;
-    width: 100vw;
-    height: 8px;
-    background: var(--neutral-color);
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-  }
+  border-radius: 0 0 2rem 2rem;
+  border-bottom: 8px solid var(--neutral-color);
+  // &:after {
+  //   content: "";
+  //   display: block;
+  //   width: 100vw;
+  //   height: 8px;
+  //   background: var(--neutral-color);
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 100%;
+  //   transform: translateX(-50%);
+  // }
 }
 
 
@@ -61,12 +63,13 @@ section:has(.mask) {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url(../img/cleaning-set-61.png);
+    background-image: url(../img/foam-19.jpg);
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: 200px;
+    background-size: cover;
     z-index: 3;
     border-radius: 2rem;
+    opacity: 0.2;
   }
 
 
@@ -78,8 +81,8 @@ section:has(.mask) {
   }
 
   @media screen and (max-width: 575px) and (min-width: 320px) {
-    height: 250px;
-    max-width: calc(100% - 2rem);
+    // height: 250px;
+    max-width: calc(100% - 1rem);
     margin-left: auto;
     margin-right: auto;
   }

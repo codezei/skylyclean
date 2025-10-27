@@ -1,16 +1,18 @@
-section.promo#promo.bg.bg-dark.bordered
+section.promo#promo.bg.bg-dark
 	.container
 		.row.flex-column-reverse.flex-lg-row.gx-5.gy-0
 			.col-12.col-lg-7.col-xl-8.align-self-center
 				.block 
 					.row.g-4.g-xl-5 
 						.col-12
-							h1.h2.promo__title.mb-0 Usługi sprzątające mieszkań i domów, pranie tapicerki meblowej, pranie&nbsp;materacy 
+							h1.h2.promo__title.mb-0 Firma sprzątająca 
 								include ../cities
+								| : Sprzątanie mieszkań, domów, pranie tapicerki, dywanów i materacy
+								
 						.col-12
 							.promo__subtitle.extractor 
 								.extractor__cleaner(data-aos="fade-left" data-aos-delay="100") 
-								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Profesjonalne sprzątanie mieszkań i domów po remoncie, usuwanie kurzu, tłuszczu i plam. Czyścimy tapicerkę meblową, materace, okna, okapy i kuchenki.
+								h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left" data-aos-delay="200") Kompleksowe usługi sprzątające (standard, po remoncie) oraz profesjonalna chímczyzka z dojazdem. Sprawdź cennik!
 						.col-12
 							.row.g-2.justify-content-center.justify-content-lg-start 
 								.col-auto.flex-grow-1.flex-lg-grow-0
@@ -19,11 +21,11 @@ section.promo#promo.bg.bg-dark.bordered
 				.mask
 					.semicircles.semicircles-top.semicircles-left
 					.semicircles.semicircles-top.semicircles-right
-					.semicircles.semicircles-bottom.semicircles-left
-					.semicircles.semicircles-bottom.semicircles-right
+					.semicircles.semicircles-bottom.semicircles-left.d-none.d-lg-block
+					.semicircles.semicircles-bottom.semicircles-right.d-none.d-lg-block
 					.mask__inner
 						h3.h6.mask__subtitle 
-							b.text-bold Usługi sprzątające mieszkań i domów:
+							b.text-bold Usługi sprzątające, pranie tapicerki, materacy, dywanów i wykładzin:
 							br
 							include ../cities
 							br

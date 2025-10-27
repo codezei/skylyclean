@@ -1,0 +1,148 @@
+extends settings/layout
+
+prepend html
+	- const lang = "pl";
+
+prepend head
+	- const pageTitle = "Pranie Materacy Katowice: Czyszczenie, dezynfekcja i usuwanie roztoczy. Cennik"
+	- const pageDescription = "Profesjonalne pranie materacy w Katowicach metodą ekstrakcyjną i parową. Usuwamy plamy, roztocza, alergeny i nieprzyjemne zapachy. Zadbaj o zdrowy sen! Sprawdź ceny."
+	- const pageKeywords = "pranie materacy Katowice, czyszczenie materacy Katowice, dezynfekcja materaca, pranie materaca z dojazdem, usuwanie roztoczy z materaca, pranie materaca cena, pranie materaca dwuosobowego"
+	- const pageUrl = "pranie-materacy.html"
+	- const pageImage = "img/logo.jpg"
+	- const twitterImage = "img/logo.jpg"
+	- const themeColor = "#ffffff"
+
+
+append head
+	//- link(rel="preload" href="fonts/cormorant-garamond-v20-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+	//- link(rel="preload" href="fonts/cormorant-garamond-v20-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+	//- script(type="application/ld+json").
+	//- 	{
+	//- 	"@context": "https://schema.org",
+	//- 	"@graph": [
+	//- 	{
+	//- 	"@type": "BreadcrumbList",
+	//- 	"itemListElement": [
+	//- 		{
+	//- 		"@type": "ListItem",
+	//- 		"position": 1,
+	//- 		"name": "Strona główna",
+	//- 		"item": "https://toptapiclean.pl/"
+	//- 		},
+	//- 		{
+	//- 		"@type": "ListItem",
+	//- 		"position": 2,
+	//- 		"name": "Pranie materacy",
+	//- 		"item": "https://toptapiclean.pl/pranie-materacy.html"
+	//- 		}
+	//- 	]
+	//- 	},
+	//- 	{
+	//- 	"@type": "Service",
+	//- 	"name": "Pranie materacy",
+	//- 	"serviceType": "Czyszczenie i pranie materacy",
+	//- 	"description": "Profesjonalne pranie materacy: usuwanie potu, plam, kurzu, roztoczy i zapachów. Bezpieczne dla alergików, szybkie schnięcie, obsługa w Nysie, Głuchołazach i Otmuchowie.",
+	//- 	"areaServed": [
+	//- 		{
+	//- 			"@type": "Place",
+	//- 			"name": "Nysa"
+	//- 		},
+	//- 		{
+	//- 			"@type": "Place",
+	//- 			"name": "Głuchołazy"
+	//- 		},
+	//- 		{
+	//- 			"@type": "Place",
+	//- 			"name": "Otmuchów"
+	//- 		}
+	//- 	],
+	//- 	"provider": {
+	//- 	"@type": ["LocalBusiness", "CleaningService"],
+	//- 	"name": "TopTapiClean",
+	//- 	"url": "https://toptapiclean.pl",
+	//- 	"telephone": "+48884412928",
+	//- 	"email": "top.tap@wp.pl",
+	//- 	"address": {
+	//- 	"@type": "PostalAddress",
+	//- 	"addressLocality": "Nysa",
+	//- 	"addressCountry": "PL"
+	//- 	}
+	//- 	},
+	//- 	"termsOfService": "https://toptapiclean.pl/",
+	//- 	"availableChannel": {
+	//- 	"@type": "ServiceChannel",
+	//- 	"servicePhone": {
+	//- 	"@type": "ContactPoint",
+	//- 	"telephone": "+48884412928",
+	//- 	"contactType": "customer service",
+	//- 	"areaServed": "PL"
+	//- 	}
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "FAQPage",
+	//- 	"mainEntity": [
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Jak często należy czyścić materac?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Zalecamy czyszczenie materaca co 6–12 miesięcy, szczególnie w przypadku alergików, dzieci i zwierząt domowych."
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Czy można usunąć wszystkie plamy i zapachy z materaca?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Większość plam i zapachów można skutecznie usunąć, choć trwałość zabrudzenia i wcześniejsze próby czyszczenia mogą wpływać na efekt końcowy."
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Czy czyszczenie materaca jest bezpieczne dla alergików?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Tak. Używamy hipoalergicznych środków czyszczących oraz usuwamy roztocza i kurz, co sprzyja poprawie jakości snu i zdrowia."
+	//- 	}
+	//- 	},
+	//- 	{
+	//- 	"@type": "Question",
+	//- 	"name": "Ile trwa schnięcie materaca po praniu?",
+	//- 	"acceptedAnswer": {
+	//- 	"@type": "Answer",
+	//- 	"text": "Zwykle 6–12 godzin w dobrze wentylowanym pomieszczeniu. Dodatkowo oferujemy usługę suszenia, dzięki której po zakończeniu pracy i wyjeździe naszego specjalisty wszystkie czyszczone powierzchnie pozostają suche i gotowe do użytku."
+	//- 	}
+	//- 	}
+	//- 	]
+	//- 	}
+	//- 	],
+	//- 	"sameAs": [
+	//- 	"https://www.facebook.com/profile.php?id=61558390682562",
+	//- 	"https://www.tiktok.com/@toptapclean?_t=8lieXgIxd56&amp;_r=1",
+	//- 	"https://goo.gl/maps/A5t7SypU83NrAAxQA"
+	//- 	]
+	//- 	}
+
+
+
+append content
+	script. 
+		const initialCategory = 2;
+	include components/header/header-2
+	main
+		include components/promo/promo-mattress
+		include components/price/price
+		//- include components/why
+		include components/process/process
+		include components/how
+		include components/reviews/reviews-mattress
+		include components/cta
+		include components/works/works-mattress
+		include components/faq/faq-mattress
+		include components/contacts
+		include components/popup
+		include components/icons
+	include components/footer
+
+append scripts

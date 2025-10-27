@@ -102,10 +102,6 @@
       var servicesSwiper = new Swiper(".services-swiper", {
         slidesPerView: 1,
         spaceBetween: 16,
-        // pagination: {
-        //   el: ".swiper-pagination",
-        //   clickable: true,
-        // },
         breakpoints: {
           430: {
             slidesPerView: 1.5
@@ -123,6 +119,28 @@
         navigation: {
           nextEl: ".services-button-next",
           prevEl: ".services-button-prev"
+        }
+      });
+      var additionalServicesSwiper = new Swiper(".additional-services-swiper", {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        breakpoints: {
+          430: {
+            slidesPerView: 3
+          },
+          576: {
+            slidesPerView: 4
+          },
+          768: {
+            slidesPerView: 5
+          },
+          1200: {
+            slidesPerView: 6
+          }
+        },
+        navigation: {
+          nextEl: ".additional-services-button-next",
+          prevEl: ".additional-services-button-prev"
         }
       });
     }
@@ -526,6 +544,7 @@
           spaceBetween: 8,
           allowTouchMove: categoriesContentSwiper.dataset.disallowTouch ? false : true,
           slideToClickedSlide: true,
+          autoHeight: true,
           watchSlidesProgress: true,
           initialSlide: initialCategory || 0,
           thumbs: {
@@ -553,101 +572,90 @@
 
     function timer () {
       initializeTimers();
+    }
 
-      function initializeTimers() {
-        var timers = document.querySelectorAll('.timer');
-        if (!timers.length) return;
-        timers.forEach(function (el, idx) {
-          return initSingleTimer(el, idx);
-        });
-      }
+    function initializeTimers() {
+      // Находим все элементы таймера на странице
+      var timers = document.querySelectorAll('.timer');
+      if (!timers.length) return;
+      timers.forEach(function (el) {
+        return initSingleTimer(el);
+      });
+    }
 
-      function initSingleTimer(timerEl, idx) {
-        var deadlineStr = (timerEl.getAttribute('data-deadline') || '').trim(); // формат dd.mm.yyyy
+    function initSingleTimer(timerEl) {
+      // 1. Получаем и парсим конечную дату (deadline)
+      var deadlineStr = (timerEl.getAttribute('data-deadline') || '').trim(); // Формат dd.mm.yyyy
 
-        var deadline = parseDDMMYYYY(deadlineStr);
+      var deadline = parseDDMMYYYY(deadlineStr);
 
-        if (!deadline) {
-          console.warn('[timer] Некорректная дата в data-deadline, ожидается dd.mm.yyyy', deadlineStr);
-          return;
-        } // Ключ в localStorage уникален для каждой даты/таймера
+      if (!deadline) {
+        console.warn('[timer] Некорректная дата в data-deadline, ожидается dd.mm.yyyy', deadlineStr);
+        return;
+      } // 2. Устанавливаем конец дня для deadline (23:59:59)
 
 
-        var storageKey = "ever-timer:".concat(location.pathname, ":").concat(idx, ":").concat(deadlineStr);
-        var now = new Date();
-        var secondsLeft;
+      var endOfDay = new Date(deadline.getFullYear(), deadline.getMonth(), deadline.getDate(), 23, 59, 59, 999); // 3. Запускаем первый "тик"
 
-        if (localStorage.getItem(storageKey) !== null) {
-          secondsLeft = +localStorage.getItem(storageKey);
-        } else {
-          // считаем разницу с текущего момента до 23:59:59 указанной даты
-          var endOfDay = new Date(deadline.getFullYear(), deadline.getMonth(), deadline.getDate(), 23, 59, 59, 999);
-          secondsLeft = Math.max(0, Math.floor((endOfDay - now) / 1000));
-          localStorage.setItem(storageKey, secondsLeft);
+      tick(timerEl, endOfDay);
+    }
+
+    function tick(timerEl, deadline) {
+      var now = new Date(); // Вычисляем оставшиеся секунды
+
+      var secondsLeft = Math.max(0, Math.floor((deadline - now) / 1000));
+      var different = document.body.classList.contains('timer-different'); // Разложение на дни/часы/минуты/секунды
+
+      var days = Math.floor(secondsLeft / 86400);
+      var hours = Math.floor(secondsLeft % 86400 / 3600);
+      var minutes = Math.floor(secondsLeft % 3600 / 60);
+      var seconds = secondsLeft % 60; // Форматирование с ведущими нулями (кроме дней)
+
+      var dStr = String(days);
+      var hStr = hours < 10 ? '0' + hours : String(hours);
+      var mStr = minutes < 10 ? '0' + minutes : String(minutes);
+      var sStr = seconds < 10 ? '0' + seconds : String(seconds);
+      fillUnit(timerEl.getElementsByClassName('days'), dStr, different);
+      fillUnit(timerEl.getElementsByClassName('hours'), hStr, different);
+      fillUnit(timerEl.getElementsByClassName('minutes'), mStr, different);
+      fillUnit(timerEl.getElementsByClassName('seconds'), sStr, different);
+
+      if (secondsLeft <= 0) {
+        return; // стоп
+      } // Рекурсивный запуск через 1 секунду
+
+
+      setTimeout(function () {
+        return tick(timerEl, deadline);
+      }, 1000);
+    } // Функции-помощники (fillUnit и parseDDMMYYYY) остаются без изменений
+
+
+    function fillUnit(nodeList, valueStr, splitDigits) {
+      if (!nodeList || !nodeList.length) return;
+
+      if (!splitDigits) {
+        for (var i = 0; i < nodeList.length; i++) {
+          nodeList[i].innerHTML = valueStr;
         }
+      } else {
+        var digits = valueStr.split('');
 
-        tick(timerEl, storageKey, secondsLeft);
-      }
-
-      function tick(timerEl, storageKey, secondsLeft) {
-        var different = document.body.classList.contains('timer-different'); // Разложение на дни/часы/минуты/секунды
-
-        var days = Math.floor(secondsLeft / 86400);
-        var hours = Math.floor(secondsLeft % 86400 / 3600);
-        var minutes = Math.floor(secondsLeft % 3600 / 60);
-        var seconds = secondsLeft % 60; // Форматирование с ведущими нулями (кроме дней — там показываем полное число)
-
-        var dStr = String(days);
-        var hStr = hours < 10 ? '0' + hours : String(hours);
-        var mStr = minutes < 10 ? '0' + minutes : String(minutes);
-        var sStr = seconds < 10 ? '0' + seconds : String(seconds);
-        fillUnit(timerEl.getElementsByClassName('days'), dStr, different);
-        fillUnit(timerEl.getElementsByClassName('hours'), hStr, different);
-        fillUnit(timerEl.getElementsByClassName('minutes'), mStr, different);
-        fillUnit(timerEl.getElementsByClassName('seconds'), sStr, different);
-
-        if (secondsLeft <= 0) {
-          localStorage.removeItem(storageKey);
-          return; // стоп
-        }
-
-        var next = secondsLeft - 1;
-        localStorage.setItem(storageKey, next);
-        setTimeout(function () {
-          return tick(timerEl, storageKey, next);
-        }, 1000);
-      }
-
-      function fillUnit(nodeList, valueStr, splitDigits) {
-        if (!nodeList || !nodeList.length) return;
-
-        if (!splitDigits) {
-          // Заполняем каждый найденный элемент целой строкой
-          for (var i = 0; i < nodeList.length; i++) {
-            nodeList[i].innerHTML = valueStr;
-          }
-        } else {
-          // Рассыпаем по символам (поддерживает 1–N цифр, например для дней)
-          var digits = valueStr.split('');
-
-          for (var _i = 0; _i < nodeList.length; _i++) {
-            nodeList[_i].innerHTML = digits[_i % digits.length];
-          }
+        for (var _i = 0; _i < nodeList.length; _i++) {
+          nodeList[_i].innerHTML = digits[_i % digits.length];
         }
       }
+    }
 
-      function parseDDMMYYYY(str) {
-        // Ожидаем dd.mm.yyyy
-        var m = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(str);
-        if (!m) return null;
-        var dd = +m[1],
-            mm = +m[2],
-            yyyy = +m[3];
-        var d = new Date(yyyy, mm - 1, dd); // Валидация (на случай 31.02.2025)
-
-        if (d.getFullYear() !== yyyy || d.getMonth() !== mm - 1 || d.getDate() !== dd) return null;
-        return d;
-      }
+    function parseDDMMYYYY(str) {
+      var m = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(str);
+      if (!m) return null;
+      var dd = +m[1],
+          mm = +m[2],
+          yyyy = +m[3];
+      var d = new Date(yyyy, mm - 1, dd);
+      if (d.getFullYear() !== yyyy || d.getMonth() !== mm - 1 || d.getDate() !== dd) return null;
+      return d;
     }
 
     function createCommonjsModule(fn, module) {

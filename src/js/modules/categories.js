@@ -36,6 +36,7 @@ export default function () {
                 spaceBetween: 8,
                 allowTouchMove: categoriesContentSwiper.dataset.disallowTouch ? false : true,
                 slideToClickedSlide: true,
+                autoHeight: true,
                 watchSlidesProgress: true,
                 initialSlide: initialCategory || 0,
                 thumbs: {

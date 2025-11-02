@@ -5,42 +5,22 @@
         --swiper-navigation-color: #ffa600;
         position: relative;
         overflow: hidden;
-            // @media screen and (max-width: 575px) {
-            //             &:before,
-            // &:after {
-            //     content: "";
-            //     display: block;
-            //     position: absolute;
-            //     top: 0;
-            //     height: 100%;
-            //     z-index: 2;
-            //     pointer-events: none;
-            //     width: calc((100vw - 100%) / 2);
-            // }
-
-            // &:after {
-            //     left: 100%;
-            //     background: linear-gradient(to right, rgba(255, 255, 255, 0.0) 0%, var(--section-color, #fff) 75%);
-            // }
-
-            // &:before {
-            //     right: 100%;
-            //     background: linear-gradient(to left, rgba(255, 255, 255, 0.0) 0%, var(--section-color, #fff) 75%);
-            // }
-            // }
         .swiper-slide {
             width: auto;
             flex-grow: 1;
+
             &:has(>.category-btn):not(:first-child) {
                 padding-left: 4px;
             }
         }
     }
+
     &-button-arrow {
         &.swiper-button-disabled {
             display: none;
         }
     }
+
     &-content {
         height: auto;
     }
@@ -48,15 +28,17 @@
 
 
 .category {
-    
+
     &-btn {
         width: 100%;
         z-index: 1;
+
         &__text {
             white-space: nowrap;
         }
-        
-        &:before, &:after {
+
+        &:before,
+        &:after {
             content: "";
             display: block;
             width: 100vw;
@@ -67,20 +49,26 @@
             opacity: 0;
             transition: opacity 400ms;
         }
+
         &:before {
             left: 100%;
         }
+
         &:after {
             right: 100%;
         }
     }
 }
+
 .swiper-slide-thumb-active {
     z-index: 2;
 }
+
 .swiper-slide-thumb-active .category-btn {
     z-index: 10;
-  &:before, &:after {
-    opacity: 1;
-  }
+
+    &:before,
+    &:after {
+        opacity: 1;
+    }
 }

@@ -360,11 +360,11 @@ br {
       background: var(--first-color);
       color: var(--fourth-color);
 
-      &:hover {
+      &.btn:hover {
         background: var(--first-color-125);
       }
 
-      &:active {
+      &.btn:active {
         background: var(--first-color);
       }
 
@@ -383,11 +383,11 @@ br {
     background: var(--second-color);
     color: var(--fourth-color-125);
 
-    &:hover {
+    &.btn:hover {
       background: var(--second-color-125);
     }
 
-    &:active {
+    &.btn:active {
       background: var(--second-color);
     }
 
@@ -404,11 +404,11 @@ br {
       background: var(--first-color);
       color: var(--second-color);
 
-      &:hover {
+      &.btn:hover {
         background: var(--first-color-125);
       }
 
-      &:active {
+      &.btn:active {
         background: var(--first-color);
       }
 
@@ -428,11 +428,11 @@ br {
     background: var(--third-color);
     color: var(--first-color);
 
-    &:hover {
+    &.btn:hover {
       background: var(--third-color-125);
     }
 
-    &:active {
+    &.btn:active {
       background: var(--third-color);
     }
 
@@ -449,11 +449,11 @@ br {
       background: var(--first-color);
       color: var(--third-color);
 
-      &:hover {
+      &.btn:hover {
         background: var(--first-color-125);
       }
 
-      &:active {
+      &.btn:active {
         background: var(--first-color);
       }
 
@@ -471,10 +471,10 @@ br {
     --border-color: var(--fourth-color);
     background: var(--first-color);
     color: var(--fourth-color);
-    &:hover {
+    &.btn:hover {
       background: var(--first-color-125);
     }
-    &:active {
+    &.btn:active {
       background: var(--first-color);
     }
     &.active,
@@ -488,10 +488,10 @@ br {
       --border-color: var(--first-color);
       background: var(--fourth-color);
       color: var(--first-color);
-      &:hover {
+      &.btn:hover {
         background: var(--fourth-color-125);
       }
-      &:active {
+      &.btn:active {
         background: var(--fourth-color);
       }
       &.active,
@@ -509,11 +509,11 @@ br {
     background: var(--contrast-color);
     color: var(--first-color);
 
-    &:hover {
+    &.btn:hover {
       background: var(--contrast-color-125);
     }
 
-    &:active {
+    &.btn:active {
       background: var(--contrast-color);
     }
 
@@ -530,11 +530,11 @@ br {
       background: var(--first-color);
       color: var(--contrast-color);
 
-      &:hover {
+      &.btn:hover {
         background: var(--contrast-color-125);
       }
 
-      &:active {
+      &.btn:active {
         background: var(--first-color);
       }
 
@@ -574,8 +574,10 @@ br {
       }
 
       .bg-light & {
-        --border-color: rgba(0, 56, 154, 0.15);
-        background: rgba(0, 56, 154, 0.1);
+        // --border-color: rgba(0, 56, 154, 0.15);
+        // background: rgba(0, 56, 154, 0.1);
+              --border-color: rgba(0, 56, 154, 0.1);
+      background: rgba(0, 56, 154, 0.05);
       }
 
     }
@@ -837,36 +839,6 @@ br {
 }
 
 
-.logo {
-  &-icon {
-    vertical-align: middle;
-
-    &__sofa {
-      transform: scale(0.45);
-      transform-origin: center 35%;
-      animation: fade-in-sofa 1s ease-out forwards;
-    }
-
-    &__circle {
-      &-inner {
-        transform-origin: center;
-        transform: rotate(158deg);
-        animation: draw-circle-inner 1s ease-out forwards;
-      }
-
-      &-outer {
-        transform-origin: center;
-        transform: rotate(158deg);
-        animation: draw-circle-outer 1s ease-out forwards;
-      }
-    }
-
-    &__text {
-      font-weight: 700;
-    }
-  }
-
-}
 
 .text-red {
   color: red;

@@ -22,18 +22,9 @@
     background-size: auto 100%;
     background-position: right top;
     background-repeat: no-repeat;
-    // animation: slide-extractor 1s forwards;
-    // &-img {
-    //   height: 100%;
-    //   width: 100vw;
-    //   object-fit: contain;
-    //   object-position: right center;
-    // }
   }
   &__text {
     margin: 0;
-    // opacity: 0;
-    // animation: slide-text 1s 0.5s forwards;
   }
 
   @media screen and (max-width: 575px) {

@@ -63,7 +63,7 @@ section:has(.mask) {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url(../img/foam-19.jpg);
+    background-image: url(../img/bg-dark-foam.webp);
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,11 +73,12 @@ section:has(.mask) {
   }
 
 
-
-
   @media screen and (max-width: 991px) {
     --triangle-size: 1.5rem;
     height: 300px;
+    &:before {
+      background-image: url(../img/bg-dark-foam-tablet.webp);
+    }
   }
 
   @media screen and (max-width: 575px) and (min-width: 320px) {
@@ -85,6 +86,9 @@ section:has(.mask) {
     max-width: calc(100% - 1rem);
     margin-left: auto;
     margin-right: auto;
+    &:before {
+      background-image: url(../img/bg-dark-foam-mob.webp);
+    }
   }
 
   &__title {
@@ -119,11 +123,6 @@ section:has(.mask) {
     justify-content: center;
     z-index: 3;
     padding: 1rem;
-
-
-
-
-
   }
 
 
